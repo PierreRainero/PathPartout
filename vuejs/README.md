@@ -1,4 +1,4 @@
-# pathpartout
+# vuejs
 
 ## Project setup
 ```
