@@ -1,10 +1,10 @@
 {
-  "name": "react-pathpartout",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ajv": "^6.5.4",
-    "purecss": "^1.0.0",
+    "node-sass": "^4.9.3",
+    "purecss-sass": "^1.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4"

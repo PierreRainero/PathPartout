@@ -1,0 +1,34 @@
+@import "../../shared.scss";
+
+.pathpartout-nav-menu {
+    padding: 0.5em;
+    text-align: right;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.pathpartout-nav-menu {
+    background: $primary-color;
+}
+.pure-menu.pure-menu-fixed {
+    border-bottom: none;
+    z-index: 4;
+}
+
+.pathpartout-nav-menu .pure-menu-heading {
+    color: $primary-color-text;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.pathpartout-nav-menu .pure-menu-selected a {
+    color: $primary-color-text;
+}
+
+.pathpartout-nav-menu a {
+    color: $primary-color-text;
+}
+.pathpartout-nav-menu li a:hover,
+.pathpartout-nav-menu li a:focus {
+    background: $primary-color-dark;
+    border: none;
+    color: $primary-color-text;
+}
