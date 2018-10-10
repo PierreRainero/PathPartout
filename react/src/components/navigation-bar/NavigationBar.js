@@ -9,16 +9,16 @@ import './NavigationBar.scss';
 class NavigationBar extends React.Component {
     render() {
         return (
-            <div class="header">
-                <div class="pure-menu pure-menu-horizontal pure-menu-fixed pathpartout-nav-menu">
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-1-2 text-left">
-                            <a class="pure-menu-heading" href="">Path'Partout</a>
+            <div className="header">
+                <div className="pure-menu pure-menu-horizontal pure-menu-fixed pathpartout-nav-menu">
+                    <div className="pure-g">
+                        <div className="pure-u-1 pure-u-md-1-2 text-left">
+                            <a className="pure-menu-heading" href="">Path'Partout</a>
                         </div>
-                        <div class="pure-u-1 pure-u-md-1-2">
-                            <ul class="pure-menu-list">
-                                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Connexion</a></li>
-                                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Inscription</a></li>
+                        <div className="pure-u-1 pure-u-md-1-2">
+                            <ul className="pure-menu-list">
+                                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Connexion</a></li>
+                                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Inscription</a></li>
                             </ul>
                         </div>
                     </div>

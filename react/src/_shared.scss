@@ -1,5 +1,83 @@
 @import './styles/_colors.scss';
 
+// -------- Typography -------
 .text-left {
     text-align: left;
 }
+
+.text-bold {
+    font-weight: bold;
+}
+// ---------------------------
+
+// -------- Adaptative -------
+@media only screen and (max-width: 567px) {
+    .hidden-sd {
+        display: none !important;
+    }
+}
+// ---------------------------
+
+// ---------- Layers ---------
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.over-top {
+    position: relative;
+    top: -12em;
+}
+
+.max-height-15 {
+    max-height: 15em;
+}
+
+@media only screen and (max-width: 567px) {
+    .max-height-15 {
+        margin-bottom: 1.5em;
+        max-height: none;
+    }
+}
+// ---------------------------
+
+// ----------- Box -----------
+.box {
+    text-align: left;
+
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
+    padding: 0.9em 1em;
+    margin: 4px 1em;
+}
+
+.box-left-primary {
+    border-left: 4px solid $primary-color;
+}
+
+.box-top-secondary {
+    border-top: 3px solid $secondary-color-dark;
+}
+// ---------------------------
