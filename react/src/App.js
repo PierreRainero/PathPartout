@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 import NavigationBar from './components/navigation-bar/NavigationBar';
-import Banner from './components/banner/Banner';
-import HomeBoard from './components/home-board/HomeBoard';
+
+import Home from './components/home/Home'
 
 import './App.scss';
 
@@ -11,10 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavigationBar />
-        <Banner />
-        <div className="container">
-          <HomeBoard />
-        </div>
+        <Route exact path="/" component={ Home } />
       </div>
     );
   }

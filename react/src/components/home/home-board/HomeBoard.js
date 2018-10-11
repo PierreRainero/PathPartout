@@ -22,7 +22,7 @@ class HomeBoard extends React.Component {
                     </div>
                     <div className="pure-u-1 pure-u-md-1-3 hidden-md">
                         <div className="over-top">
-                            <img src={require("../../assets/imgs/iphone-optimized.png")} className="pure-img center" alt="smartphone-img" />
+                            <img src={require("../../../assets/imgs/iphone-optimized.png")} className="pure-img center" alt="smartphone-img" />
                         </div>
                     </div>
                 </div>
