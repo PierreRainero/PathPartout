@@ -1,76 +1,67 @@
 <template>
-  <div>
-    <b-carousel id="carousel1"
-                style="text-shadow: 1px 1px 2px #333;"
-                controls
-                indicators
-                background="#ababab"
-                :interval="4000"
-                img-width="1024"
-                img-height="480"
-                v-model="slide"
-                @sliding-start="onSlideStart"
-                @sliding-end="onSlideEnd"
-    >
-
-      <!-- Text slides with image -->
-      <b-carousel-slide caption="First slide"
-                        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-                        img-src="https://picsum.photos/1024/480/?image=52"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58">
-      </b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-             src="https://picsum.photos/1024/480/?image=55" alt="image slot">
-      </b-carousel-slide>
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+<div>
+  <b-img src="http://static.apidae-tourisme.com/filestore/objets-touristiques/images/10/255/786186.jpg" fluid-grow alt="Responsive image" class="image_fond" />
+  <div class="row my-col">
+    <div class="col-md-7 info-box">
+      <div>
+        <h3 style="margin-top: 20px">Il y a 32 randonnées autour de Biot</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          eros felis, tincidunt a tincidunt eget, convallis vel est. Ut pellentesque
-          ut lacus vel interdum.
+          Pour démarrer, créez un compte Path'Partout gratuit, puis téléchargez l'application officielle.
         </p>
-      </b-carousel-slide>
-
-    </b-carousel>
-
-    <p class="mt-4">
-      Slide #: {{ slide }}<br>
-      Sliding: {{ sliding }}
-    </p>
-
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="margin-bottom: 20px">
+          <a>
+            <img src="../assets/badge-apple.svg"/>
+          </a>
+          <a>
+            <img src="../assets/badge-google-play.png"/>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 text-left">
+      <Smartphone />
+    </div>
   </div>
+  <div class="container">
+      <div class="col-md-12 text-left steps">
+    <h3>Étapes à suivre avant de partir en ballade</h3>
+  </div>
+  </div>
+</div>
 </template>
 
 <script>
+import Smartphone from "./Smartphone.vue";
+
 export default {
   name: "Presentation",
-  data() {
-    return {
-      slide: 0,
-      sliding: null
-    };
-  },
-  methods: {
-    onSlideStart(slide) {
-      this.sliding = true;
-    },
-    onSlideEnd(slide) {
-      this.sliding = false;
-    }
+  components: {
+    Smartphone
   }
 };
 </script>
-<!-- carousel-1.vue -->
+
+<style scoped>
+
+.steps {
+  padding-top:30px;
+}
+.info-box{
+  padding-left: 20%;
+  padding-right: 10%;
+}
+.my-col {
+  background-color: #f5f5f5;
+}
+.row {
+  margin: 0;
+}
+.image_fond {
+  max-height: 450px !important;
+  object-fit: cover;
+  object-position: 56%;
+  z-index: 1;
+}
+</style>
