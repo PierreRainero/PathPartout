@@ -1,6 +1,10 @@
 @import './styles/_colors.scss';
 
 // -------- Typography -------
+.secondary-dark {
+    color: $secondary-color-dark;
+}
+
 .text-left {
     text-align: left;
 }
@@ -11,14 +15,19 @@
 // ---------------------------
 
 // -------- Adaptative -------
-@media only screen and (max-width: 567px) {
-    .hidden-sd {
+@media only screen and (max-width: 767px) {
+    .hidden-md {
         display: none !important;
     }
 }
 // ---------------------------
 
 // ---------- Layers ---------
+.center {
+    display:block;
+    margin:auto; 
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
@@ -47,16 +56,29 @@
 .over-top {
     position: relative;
     top: -12em;
+    z-index: 3;
 }
 
 .max-height-15 {
     max-height: 15em;
 }
 
+.block-parent {
+    display: flex;
+}
+
+.block-child {
+    flex: 1; 
+}
+
 @media only screen and (max-width: 567px) {
     .max-height-15 {
         margin-bottom: 1.5em;
         max-height: none;
+    }
+    
+    .block-child {
+        flex: content; 
     }
 }
 // ---------------------------
@@ -79,5 +101,19 @@
 
 .box-top-secondary {
     border-top: 3px solid $secondary-color-dark;
+}
+
+.box-img {
+    border-radius: 3px;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+.box-header {
+    margin: 0;
+}
+.box-content {
+    font-size: 80%;
+    margin: 0.4em 0;
 }
 // ---------------------------
