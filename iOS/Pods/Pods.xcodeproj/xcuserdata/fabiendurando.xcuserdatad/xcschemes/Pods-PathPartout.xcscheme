@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5583AD1A59A71FC7C308A75172BFE93"
-               BlueprintName = "Pods-PathPartoutReborn"
+               BlueprintIdentifier = "626F9661BAB8C9CD91C41CD9E356FA2B"
+               BlueprintName = "Pods-PathPartout"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-PathPartoutReborn.a">
+               BuildableName = "libPods-PathPartout.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

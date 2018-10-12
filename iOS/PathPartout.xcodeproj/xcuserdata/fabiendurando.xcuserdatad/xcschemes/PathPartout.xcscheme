@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B3185BC217015CC00A41679"
-            BuildableName = "PathPartoutReborn.app"
-            BlueprintName = "PathPartoutReborn"
-            ReferencedContainer = "container:PathPartoutReborn.xcodeproj">
+            BuildableName = "PathPartout.app"
+            BlueprintName = "PathPartout"
+            ReferencedContainer = "container:PathPartout.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7B3185BC217015CC00A41679"
-            BuildableName = "PathPartoutReborn.app"
-            BlueprintName = "PathPartoutReborn"
-            ReferencedContainer = "container:PathPartoutReborn.xcodeproj">
+            BuildableName = "PathPartout.app"
+            BlueprintName = "PathPartout"
+            ReferencedContainer = "container:PathPartout.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>

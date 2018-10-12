@@ -23,13 +23,9 @@ class MapController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        // Create a GMSCameraPosition that tells the map to display the
-        // coordinate -33.86,151.20 at zoom level 6.
-        
-        // Ask for Authorisation from the User.
+        // Get location
         
         self.locationManager.requestAlwaysAuthorization()
-        
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
         
@@ -38,7 +34,6 @@ class MapController: UIViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-        // updateLocation()
     }
     
     func updateLocation() {
@@ -49,8 +44,7 @@ class MapController: UIViewController {
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.title = "Your Position"
         marker.map = mapView
     }
 }

@@ -13,12 +13,14 @@
 		7B3185C8217015CE00A41679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C7217015CE00A41679 /* Assets.xcassets */; };
 		7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */; };
 		7B3185D321701A7B00A41679 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185D221701A7B00A41679 /* MapController.swift */; };
-		9539712D54B65ADC1729DC95 /* libPods-PathPartoutReborn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */; };
+		BDD66F5992EB302E9318A547 /* libPods-PathPartout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B96FAA474B4FC8D591F257 /* Pods-PathPartoutReborn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartoutReborn.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn.release.xcconfig"; sourceTree = "<group>"; };
-		7B3185BD217015CC00A41679 /* PathPartoutReborn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathPartoutReborn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1CA2B62170986E0041EDE5 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3185BD217015CC00A41679 /* PathPartout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathPartout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3185C0217015CC00A41679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3185C2217015CC00A41679 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B3185C5217015CC00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,6 +29,8 @@
 		7B3185CC217015CE00A41679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3185D221701A7B00A41679 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BABE07567ECEA7F1571DF631 /* Pods-PathPartout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.debug.xcconfig"; sourceTree = "<group>"; };
+		BE7233A8919E40785EA5B098 /* Pods-PathPartout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.release.xcconfig"; sourceTree = "<group>"; };
 		D1953FD8EDB1FF53FC281DC9 /* Pods-PathPartoutReborn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartoutReborn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9539712D54B65ADC1729DC95 /* libPods-PathPartoutReborn.a in Frameworks */,
+				BDD66F5992EB302E9318A547 /* libPods-PathPartout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +51,8 @@
 			children = (
 				D1953FD8EDB1FF53FC281DC9 /* Pods-PathPartoutReborn.debug.xcconfig */,
 				27B96FAA474B4FC8D591F257 /* Pods-PathPartoutReborn.release.xcconfig */,
+				BABE07567ECEA7F1571DF631 /* Pods-PathPartout.debug.xcconfig */,
+				BE7233A8919E40785EA5B098 /* Pods-PathPartout.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -54,7 +60,7 @@
 		7B3185B4217015CC00A41679 = {
 			isa = PBXGroup;
 			children = (
-				7B3185BF217015CC00A41679 /* PathPartoutReborn */,
+				7B3185BF217015CC00A41679 /* PathPartout */,
 				7B3185BE217015CC00A41679 /* Products */,
 				2306844BEE4B982F9443D016 /* Pods */,
 				DD5F30FCD68411A68F3DC67B /* Frameworks */,
@@ -64,12 +70,12 @@
 		7B3185BE217015CC00A41679 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B3185BD217015CC00A41679 /* PathPartoutReborn.app */,
+				7B3185BD217015CC00A41679 /* PathPartout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B3185BF217015CC00A41679 /* PathPartoutReborn */ = {
+		7B3185BF217015CC00A41679 /* PathPartout */ = {
 			isa = PBXGroup;
 			children = (
 				7B3185C0217015CC00A41679 /* AppDelegate.swift */,
@@ -80,13 +86,15 @@
 				7B3185CC217015CE00A41679 /* Info.plist */,
 				7B3185D221701A7B00A41679 /* MapController.swift */,
 			);
-			path = PathPartoutReborn;
+			path = PathPartout;
 			sourceTree = "<group>";
 		};
 		DD5F30FCD68411A68F3DC67B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B1CA2B62170986E0041EDE5 /* libPods-PathPartoutReborn.a */,
 				96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */,
+				05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B3185BC217015CC00A41679 /* PathPartoutReborn */ = {
+		7B3185BC217015CC00A41679 /* PathPartout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B3185CF217015CE00A41679 /* Build configuration list for PBXNativeTarget "PathPartoutReborn" */;
+			buildConfigurationList = 7B3185CF217015CE00A41679 /* Build configuration list for PBXNativeTarget "PathPartout" */;
 			buildPhases = (
 				96D559C9BAE97103FF30BF5C /* [CP] Check Pods Manifest.lock */,
 				7B3185B9217015CC00A41679 /* Sources */,
@@ -108,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = PathPartoutReborn;
+			name = PathPartout;
 			productName = PathPartoutReborn;
-			productReference = 7B3185BD217015CC00A41679 /* PathPartoutReborn.app */;
+			productReference = 7B3185BD217015CC00A41679 /* PathPartout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -128,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B3185B8217015CC00A41679 /* Build configuration list for PBXProject "PathPartoutReborn" */;
+			buildConfigurationList = 7B3185B8217015CC00A41679 /* Build configuration list for PBXProject "PathPartout" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B3185BC217015CC00A41679 /* PathPartoutReborn */,
+				7B3185BC217015CC00A41679 /* PathPartout */,
 			);
 		};
 /* End PBXProject section */
@@ -175,7 +183,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PathPartoutReborn-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-PathPartout-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -190,7 +198,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
@@ -203,7 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,16 +367,16 @@
 		};
 		7B3185D0217015CE00A41679 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1953FD8EDB1FF53FC281DC9 /* Pods-PathPartoutReborn.debug.xcconfig */;
+			baseConfigurationReference = BABE07567ECEA7F1571DF631 /* Pods-PathPartout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PathPartoutReborn/Info.plist;
+				INFOPLIST_FILE = PathPartout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fabien.PathPartoutReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = fabien.PathPartout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,16 +385,16 @@
 		};
 		7B3185D1217015CE00A41679 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27B96FAA474B4FC8D591F257 /* Pods-PathPartoutReborn.release.xcconfig */;
+			baseConfigurationReference = BE7233A8919E40785EA5B098 /* Pods-PathPartout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PathPartoutReborn/Info.plist;
+				INFOPLIST_FILE = PathPartout/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fabien.PathPartoutReborn;
+				PRODUCT_BUNDLE_IDENTIFIER = fabien.PathPartout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,7 +404,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B3185B8217015CC00A41679 /* Build configuration list for PBXProject "PathPartoutReborn" */ = {
+		7B3185B8217015CC00A41679 /* Build configuration list for PBXProject "PathPartout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B3185CD217015CE00A41679 /* Debug */,
@@ -405,7 +413,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B3185CF217015CE00A41679 /* Build configuration list for PBXNativeTarget "PathPartoutReborn" */ = {
+		7B3185CF217015CE00A41679 /* Build configuration list for PBXNativeTarget "PathPartout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B3185D0217015CE00A41679 /* Debug */,
