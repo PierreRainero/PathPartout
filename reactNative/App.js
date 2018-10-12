@@ -7,7 +7,9 @@
  */
 
 import React, {Component} from 'react';
-import {Button, Container, Footer, FooterTab, Icon, Text} from 'native-base';
+import {StyleProvider, Button, Container, Footer, FooterTab, Icon, Text} from 'native-base';
+import getTheme from './native-base-theme/components';
+
 import Home from "./app/Home";
 import Map from "./app/Map";
 
@@ -20,32 +22,34 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-        <Container>
-            { this.state.selectedTab === 'home' ? <Home /> : null }
-            { this.state.selectedTab === 'map' ? <Map /> : null }
-            <Footer>
-                <FooterTab>
-                    <Button
-                        vertical
-                        active={this.state.selectedTab === 'home' ? true : null}
-                        onPress={() => this.setState({selectedTab: 'home'})}>
-                        <Icon
+        <StyleProvider  style={getTheme()}>
+            <Container>
+                { this.state.selectedTab === 'home' ? <Home /> : null }
+                { this.state.selectedTab === 'map' ? <Map /> : null }
+                <Footer>
+                    <FooterTab>
+                        <Button
+                            vertical
                             active={this.state.selectedTab === 'home' ? true : null}
-                            name="home" />
-                        <Text>Accueil</Text>
-                    </Button>
-                    <Button
-                        vertical
-                        active={this.state.selectedTab === 'map' ? true : null}
-                        onPress={() => this.setState({selectedTab: 'map'})}>
-                        <Icon
+                            onPress={() => this.setState({selectedTab: 'home'})}>
+                            <Icon
+                                active={this.state.selectedTab === 'home' ? true : null}
+                                name="home" />
+                            <Text>Accueil</Text>
+                        </Button>
+                        <Button
+                            vertical
                             active={this.state.selectedTab === 'map' ? true : null}
-                            name="map" />
-                        <Text>Carte</Text>
-                    </Button>
-                </FooterTab>
-            </Footer>
-        </Container>
+                            onPress={() => this.setState({selectedTab: 'map'})}>
+                            <Icon
+                                active={this.state.selectedTab === 'map' ? true : null}
+                                name="map" />
+                            <Text>Carte</Text>
+                        </Button>
+                    </FooterTab>
+                </Footer>
+            </Container>
+        </StyleProvider>
     );
   }
 }
