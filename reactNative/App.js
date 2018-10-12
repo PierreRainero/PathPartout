@@ -10,8 +10,8 @@ import React, {Component} from 'react';
 import {StyleProvider, Button, Container, Footer, FooterTab, Icon, Text} from 'native-base';
 import getTheme from './native-base-theme/components';
 
-import Home from "./app/Home";
-import Map from "./app/Map";
+import Home from "./app/screens/Home";
+import Map from "./app/screens/Map";
 
 type Props = {};
 export default class App extends Component<Props> {
