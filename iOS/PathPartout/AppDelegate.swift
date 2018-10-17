@@ -17,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GMSServices.provideAPIKey("AIzaSyBAtKBVghymTD5Ed2RC8pRRyiisGBMsZLM")
+        
+        // Customizaiton of the navigation bar
+        UINavigationBar.appearance().barTintColor = UIColor(named: "PSombre")
+        UINavigationBar.appearance().tintColor = UIColor(named: "PTexte")
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        // Color of the Status Bar elements
+        UINavigationBar.appearance().barStyle = .blackOpaque
+        
+        UINavigationBar.appearance().isTranslucent = false
+        
         return true
     }
 

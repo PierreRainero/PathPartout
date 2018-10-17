@@ -15,7 +15,7 @@ class MapController: UIViewController {
     var mapView: GMSMapView!
     var latitude : Double = 0
     var longitude : Double = 0
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

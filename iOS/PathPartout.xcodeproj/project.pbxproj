@@ -13,6 +13,9 @@
 		7B3185C8217015CE00A41679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C7217015CE00A41679 /* Assets.xcassets */; };
 		7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */; };
 		7B3185D321701A7B00A41679 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185D221701A7B00A41679 /* MapController.swift */; };
+		7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD302177AD8C00794FD5 /* UserViewController.swift */; };
+		7B8DAD332177ADA300794FD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD322177ADA300794FD5 /* MainViewController.swift */; };
+		7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */; };
 		BDD66F5992EB302E9318A547 /* libPods-PathPartout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		7B3185CA217015CE00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B3185CC217015CE00A41679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3185D221701A7B00A41679 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		7B8DAD302177AD8C00794FD5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		7B8DAD322177ADA300794FD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandlerViewController.swift; sourceTree = "<group>"; };
 		96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABE07567ECEA7F1571DF631 /* Pods-PathPartout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.debug.xcconfig"; sourceTree = "<group>"; };
 		BE7233A8919E40785EA5B098 /* Pods-PathPartout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,12 +85,15 @@
 			isa = PBXGroup;
 			children = (
 				7B3185C0217015CC00A41679 /* AppDelegate.swift */,
-				7B3185C2217015CC00A41679 /* ViewController.swift */,
 				7B3185C4217015CC00A41679 /* Main.storyboard */,
+				7B3185C2217015CC00A41679 /* ViewController.swift */,
+				7B8DAD322177ADA300794FD5 /* MainViewController.swift */,
+				7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */,
+				7B8DAD302177AD8C00794FD5 /* UserViewController.swift */,
+				7B3185D221701A7B00A41679 /* MapController.swift */,
 				7B3185C7217015CE00A41679 /* Assets.xcassets */,
 				7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */,
 				7B3185CC217015CE00A41679 /* Info.plist */,
-				7B3185D221701A7B00A41679 /* MapController.swift */,
 			);
 			path = PathPartout;
 			sourceTree = "<group>";
@@ -222,8 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3185C3217015CC00A41679 /* ViewController.swift in Sources */,
+				7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */,
 				7B3185D321701A7B00A41679 /* MapController.swift in Sources */,
 				7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */,
+				7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */,
+				7B8DAD332177ADA300794FD5 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
