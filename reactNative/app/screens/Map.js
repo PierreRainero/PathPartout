@@ -2,7 +2,7 @@ import {Component} from "react";
 import {View} from "native-base";
 import React from "react";
 import {StyleSheet, Alert} from "react-native";
-import MapView from "react-native-maps";
+import MapView, {Marker, Polyline} from "react-native-maps";
 import Permissions from 'react-native-permissions';
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 
@@ -69,6 +69,41 @@ export default class Home extends Component<Props> {
                     showsUserLocation={true}
                     showsMyLocationButton={true}
                 >
+                    <Marker
+                        coordinate={{
+                            latitude: 43.622319,
+                            longitude: 7.049978
+                        }}
+                        title={"Test"}
+                        description={"Description"}
+                    />
+                    <Marker
+                        coordinate={{
+                            latitude: 43.623538,
+                            longitude: 7.047784
+                        }}
+                        title={"Test2"}
+                        description={"Description"}
+                    />
+                    <Polyline
+                        coordinates={[
+                            {
+                                latitude: this.state.region.latitude,
+                                longitude: this.state.region.longitude
+                            },
+                            {
+                                latitude: 43.622319,
+                                longitude: 7.049978
+                            },
+                            {
+                                latitude: 43.623538,
+                                longitude: 7.047784
+                            }
+                        ]}
+                        strokeColor="#F00"
+                        fillColor="rgba(255,0,0,0.5)"
+                        strokeWidth={1}
+                    />
                 </MapView>
             </View>
         );
