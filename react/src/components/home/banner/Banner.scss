@@ -11,14 +11,25 @@
     display: table;
 }
 
+.banner-as-background {
+    height: 100vh;
+}
+
 .banner-head {
     display: table-cell;
-    vertical-align: middle;
     margin-bottom: 0;
     font-size: 2em;
     color: $primary-color-text;
     font-weight: 500;
     text-shadow: 0 1px 1px $secondary-color-text;
+}
+
+.banner-head-middle {
+    vertical-align: middle;
+}
+
+.relative-block {
+    position: relative;
 }
 
 @media(min-width: 767px) {
@@ -31,6 +42,7 @@
     .banner {
         height: 400px;
     }
+
     .banner-head {
         font-size: 3em;
     }

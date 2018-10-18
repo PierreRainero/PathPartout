@@ -1,5 +1,17 @@
 @import './styles/_colors.scss';
 
+// ---------- Links ----------
+a {
+    color: $primary-color;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: $primary-color-dark;
+}
+// ---------------------------
+
 // -------- Typography -------
 .secondary-dark {
     color: $secondary-color-dark;
@@ -7,6 +19,10 @@
 
 .text-left {
     text-align: left;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-bold {
@@ -18,6 +34,10 @@
 @media only screen and (max-width: 767px) {
     .hidden-md {
         display: none !important;
+    }
+
+    .avoid-navigation-bar {
+        padding-top: 35px;
     }
 }
 // ---------------------------
@@ -115,5 +135,18 @@
 .box-content {
     font-size: 80%;
     margin: 0.4em 0;
+}
+// ---------------------------
+
+// --------- Buttons ---------
+.button-primary {
+    color: $primary-color-text;
+    background-color: $primary-color;
+}
+
+.button-primary:hover,
+.button-primary:active,
+.button-primary:focus {
+    background-color: $primary-color-dark;
 }
 // ---------------------------

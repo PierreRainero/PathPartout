@@ -8,9 +8,11 @@ import HomeBoard from './home-board/HomeBoard';
 class Home extends React.Component {
     render() {
         return (
-            <div className="container">
-                <Banner />
-                <HomeBoard />
+            <div>
+                <Banner title='Des balades en quelques clics'/>
+                <div className="container">
+                    <HomeBoard />
+                </div>
             </div>
         );
     }
