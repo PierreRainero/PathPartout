@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+        
+    let items = [["Tracer", "Faites vos trajets facilement et rapidement à l'aide de notre carte intéractive intégrée."],["Promener", "Explorez des points d'intêrets autours de vous, changez vous les idées avec de longues randonnées."],["Partager", "Echangez vos trajets et vos découvertes avec vos amis ou le reste de la communauté."]]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,14 +27,23 @@ class MainViewController: UIViewController {
         return .lightContent
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Collection Elements
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return items.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
+        cell.title.text = items[indexPath.item][0]
+        cell.textContent.text = items[indexPath.item][1]
+        cell.textContent.lineBreakMode = .byWordWrapping
+        cell.textContent.numberOfLines = 0
+        return cell
+    }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+    }
+    
 }
