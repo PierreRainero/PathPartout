@@ -26,6 +26,7 @@ export default class App extends Component<Props> {
             <Container>
                 { this.state.selectedTab === 'home' ? <Home /> : null }
                 { this.state.selectedTab === 'map' ? <Map /> : null }
+                { this.state.selectedTab === 'account' ? <Map /> : null }
                 <Footer>
                     <FooterTab>
                         <Button
@@ -45,6 +46,15 @@ export default class App extends Component<Props> {
                                 active={this.state.selectedTab === 'map' ? true : null}
                                 name="map" />
                             <Text>Carte</Text>
+                        </Button>
+                        <Button
+                            vertical
+                            active={this.state.selectedTab === 'account' ? true : null}
+                            onPress={() => this.setState({selectedTab: 'account'})}>
+                            <Icon
+                                active={this.state.selectedTab === 'account' ? true : null}
+                                name="md-people" />
+                            <Text>Profil</Text>
                         </Button>
                     </FooterTab>
                 </Footer>
