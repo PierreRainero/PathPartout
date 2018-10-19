@@ -16,8 +16,8 @@ class Banner extends React.Component {
 
     render() {
         return (
-            <div className="banner avoid-navigation-bar relative-block">
-                <h1 className={`banner-head ${this.state.middle? "banner-head-middle" : ""} ${this.state.background? "banner-as-background" : ""}`}>
+            <div className="banner relative-block">
+                <h1 className={`banner-head ${this.state.middle? "banner-head-middle" : "banner-head-top"} ${this.state.background? "banner-as-background" : ""}`}>
                     { this.state.title }
                 </h1>
             </div>

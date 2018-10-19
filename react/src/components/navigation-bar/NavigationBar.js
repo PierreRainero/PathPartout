@@ -2,58 +2,52 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import AuthenticatorService from '../connection/AuthenticatorService';
-import userStore from '../connection/userStore';
-
-import 'purecss-sass/vendor/assets/stylesheets/purecss/_menus.scss'
-import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids.scss'
-import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids-responsive.scss'
 
 import './NavigationBar.scss';
 
 class NavigationBar extends React.Component {
-
+    toggle(e) {
+        var navbarNativeElement = document.getElementById("navbar-container");
+        if (navbarNativeElement.className === "topnav") {
+            navbarNativeElement.className += " responsive";
+        } else {
+            navbarNativeElement.className = "topnav";
+        }
+    }
 
     render() {
         let rightPart;
         if (AuthenticatorService.isLogged()) {
-            rightPart = <div className="pure-u-1 pure-u-md-1-2">
-                            <ul className="pure-menu-list">
-                                <li className="pure-menu-item">
-                                    <a href="#" className="pure-menu-link">
-                                        <i className="fa fa-user-circle"></i>
-                                        <span> {userStore.getState().connectedUser.email}</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>;
+            rightPart = <div className="nav-body">
+                            <Link to="/map" onClick={this.toggle}>
+                                <i className="fa fa-map"></i>
+                                <span> Carte</span>
+                            </Link>
+                            <a href="#" >
+                                <i className="fa fa-user-circle"></i>
+                                <span> Profil</span>
+                            </a>
+                        </div >;
         } else {
-            rightPart = <div className="pure-u-1 pure-u-md-1-2">
-                            <ul className="pure-menu-list">
-
-                                <li className="pure-menu-item">
-                                    <Link to="/login" className="pure-menu-link">
-                                        Connexion
-                                    </Link>
-                                </li>
-                                <li className="pure-menu-item">
-                                    <a href="#" className="pure-menu-link">Inscription</a>
-                                </li>
-                            </ul>
+            rightPart = <div className="nav-body">
+                            <Link to="/login" onClick={this.toggle}>
+                                Connexion
+                            </Link>
+                            <a href="#">Inscription</a>
                         </div>;
         }
 
         return (
-            <div className="header">
-                <div className="pure-menu pure-menu-horizontal pure-menu-fixed pathpartout-nav-menu">
-                    <div className="pure-g">
-                        <div className="pure-u-1 pure-u-md-1-2 text-left">
-                            <Link className="pure-menu-heading" to="/">
-                                Path'Partout
-                            </Link>
-                        </div>
-                        {rightPart}
-                    </div>
+            <div className="topnav" id="navbar-container">
+                <div className="nav-header">
+                    <Link to="/">
+                        Path'Partout
+                </Link>
                 </div>
+                {rightPart}
+                <a href="javascript:void(0);" className="icon" onClick={this.toggle}>
+                    <i className="fa fa-bars"></i>
+                </a>
             </div>
         );
     }

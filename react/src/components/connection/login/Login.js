@@ -48,7 +48,7 @@ class Login extends React.Component {
         return (
             <div>
                 <Banner title='Prêt à vivre une aventure' middle={false} background={true} />
-                <div className="container avoid-navigation-bar over-form">
+                <div className="container over-form">
                     <form className="pure-form pure-form-stacked">
                         <fieldset>
                             <div className="box wrapped">
