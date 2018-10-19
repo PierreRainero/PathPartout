@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyBAtKBVghymTD5Ed2RC8pRRyiisGBMsZLM")
         
         // Customizaiton of the navigation bar
-        UINavigationBar.appearance().barTintColor = UIColor(named: "PSombre")
+        UINavigationBar.appearance().barTintColor = UIColor(named: "Primaire")
         UINavigationBar.appearance().tintColor = UIColor(named: "PTexte")
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         

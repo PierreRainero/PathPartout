@@ -14,7 +14,7 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        tabBarItem = UITabBarItem(title: "Menu", image: UIImage(named: "main_icon"), tag: 1)
+        tabBarItem = UITabBarItem(title: "ACCEUIL", image: UIImage(named: "home_icon"), tag: 1)
     }
 
     override func viewDidLoad() {

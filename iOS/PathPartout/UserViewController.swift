@@ -12,7 +12,7 @@ class UserViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        tabBarItem = UITabBarItem(title: "Account", image: UIImage(named: "account_icon"), tag: 3)
+        tabBarItem = UITabBarItem(title: "PROFIL", image: UIImage(named: "account_icon"), tag: 3)
     }
 
     override func viewDidLoad() {

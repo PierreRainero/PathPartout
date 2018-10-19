@@ -12,7 +12,7 @@ class MapHandlerViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        tabBarItem = UITabBarItem(title: "Map", image: UIImage(named: "map_icon"), tag: 2)
+        tabBarItem = UITabBarItem(title: "CARTE", image: UIImage(named: "carte_icon"), tag: 2)
     }
     
     override func viewDidLoad() {
