@@ -1,0 +1,148 @@
+@import './styles/_colors.scss';
+
+// ---------- Links ----------
+a {
+    color: $primary-color;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: $primary-color-dark;
+}
+// ---------------------------
+
+// -------- Typography -------
+.secondary-dark {
+    color: $secondary-color-dark;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+// ---------------------------
+
+// -------- Adaptative -------
+@media only screen and (max-width: 767px) {
+    .hidden-md {
+        display: none !important;
+    }
+}
+// ---------------------------
+
+// ---------- Layers ---------
+.center {
+    display:block;
+    margin:auto; 
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.over-top {
+    position: relative;
+    top: -12em;
+    z-index: 3;
+}
+
+.max-height-15 {
+    max-height: 15em;
+}
+
+.block-parent {
+    display: flex;
+}
+
+.block-child {
+    flex: 1; 
+}
+
+@media only screen and (max-width: 567px) {
+    .max-height-15 {
+        margin-bottom: 1.5em;
+        max-height: none;
+    }
+    
+    .block-child {
+        flex: content; 
+    }
+}
+// ---------------------------
+
+// ----------- Box -----------
+.box {
+    text-align: left;
+
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
+    padding: 0.9em 1em;
+    margin: 4px 1em;
+}
+
+.box-left-primary {
+    border-left: 4px solid $primary-color;
+}
+
+.box-top-secondary {
+    border-top: 3px solid $secondary-color-dark;
+}
+
+.box-img {
+    border-radius: 3px;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+.box-header {
+    margin: 0;
+}
+.box-content {
+    font-size: 80%;
+    margin: 0.4em 0;
+}
+// ---------------------------
+
+// --------- Buttons ---------
+.button-primary {
+    color: $primary-color-text;
+    background-color: $primary-color;
+}
+
+.button-primary:hover,
+.button-primary:active,
+.button-primary:focus {
+    background-color: $primary-color-dark;
+}
+// ---------------------------

@@ -16,10 +16,10 @@ L’application a pour objectif de planifier et d’accompagner l’utilisateur 
 
 ### Couleurs
 
-* Primaire : #32cd32 ![#32cd32](https://placehold.it/15/32cd32/000000?text=+)
+* Primaire : #009b00 ![#009b00](https://placehold.it/15/009b00/000000?text=+)
 
-  * Clair : #73ff65 ![#73ff65](https://placehold.it/15/73ff65/000000?text=+)
-  * Sombre : #009b00 ![#009b00](https://placehold.it/15/009b00/000000?text=+)
+  * Clair : #54cd41 ![#54cd41](https://placehold.it/15/54cd41/000000?text=+)
+  * Sombre : #006b00 ![#006b00](https://placehold.it/15/006b00/000000?text=+)
   * Texte : #ffffff ![#ffffff](https://placehold.it/15/ffffff/000000?text=+)
 
 * Secondaire : #bdbdbd ![#bdbdbd](https://placehold.it/15/bdbdbd/000000?text=+)

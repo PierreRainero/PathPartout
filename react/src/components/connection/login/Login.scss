@@ -1,0 +1,15 @@
+@import "../../../shared";
+
+.wrapped {
+    display: inline-block
+}
+
+.over-form {
+    position: absolute;
+    top: 10em;
+
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+}
