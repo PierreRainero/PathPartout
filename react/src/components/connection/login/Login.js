@@ -34,7 +34,7 @@ class Login extends React.Component {
     loginUser(event) {
         const connectedUser = AuthenticatorService.login(this.state.email, this.state.password);
         if(connectedUser !== null) {
-            // Unknow user (impossible because backend is MOCKED)
+            this.props.history.push('/map');
         }
 
         event.preventDefault();

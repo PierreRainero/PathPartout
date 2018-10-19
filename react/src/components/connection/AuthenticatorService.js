@@ -13,6 +13,13 @@ class AuthenticatorService {
         userStore.setState({ connectedUser: new User(1, email, password, "", "") });
         return userStore.getState().connectedUser;
     }
+
+    /**
+     * Return if an user is connected to the app or not (used by the guard)
+     */
+    static isLogged() {
+        return userStore.getState().connectedUser !== undefined;
+    }
 }
 
 export default AuthenticatorService;  
