@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div>
-      <h2>Ajouter un point d'intéret</h2>
+    <!-- <div>
       <label>
         <gmap-autocomplete
           @place_changed="setPlace">
@@ -9,9 +8,8 @@
         <button @click="addMarker">Ajouter</button>
       </label>
       <br/>
-
     </div>
-    <br>
+    <br> -->
     <gmap-map
       :center="center"
       :zoom="12"

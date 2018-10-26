@@ -4,28 +4,26 @@
             <Runs/>
         </div>
         <div class="col-md-8">
-            <Map />
+            <div style="margin-top:3vh">
+                <Map />
+            </div>
         </div>
     </div>
 </template>
 
 
 <script>
-import Map from './Map.vue'
-import Runs from './Runs.vue'
+import Map from "./Map.vue";
+import Runs from "./Runs.vue";
 export default {
   name: "Profile",
-  components : {
-      Map,
-      Runs
+  components: {
+    Map,
+    Runs
   }
 };
-
 </script>
 
 
 <style scoped>
-
-
-
 </style>
