@@ -1,14 +1,20 @@
 <template>
-    <div>
-        Carte
+    <div class="container-fluid">
+        <div class="map">
+            <GoogleMap />
+        </div>
     </div>
+    
 </template>
 
 
 <script>
-
+import GoogleMap from './GoogleMap.vue'
 export default {
-  name: "Map"
+  name: "Map",
+  components: {
+      GoogleMap
+  }
 };
 
 </script>
@@ -16,6 +22,9 @@ export default {
 
 <style scoped>
 
-
+.map {
+    border: solid 1px black;
+    margin-top: 3vh;
+}
 
 </style>
