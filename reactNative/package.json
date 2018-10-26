@@ -1,0 +1,26 @@
+{
+  "name": "reactNative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "native-base": "^2.8.1",
+    "react": "16.5.0",
+    "react-native": "0.57.2",
+    "react-native-android-location-enabler": "^1.0.8",
+    "react-native-maps": "^0.22.0",
+    "react-native-permissions": "^1.1.1"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.48.1",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
