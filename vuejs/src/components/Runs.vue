@@ -2,17 +2,19 @@
   <div class="container">
     <div class="left-panel">
       <div class="navbar-brand">Mes tracers</div>
-      <div v-for="(run, index) in runs" :key="index">
-        <Run :title=run.title :description=run.description :date=run.date :img=run.img />
-      </div>
+        <div class="scrollable">
+          <div v-for="(run, index) in runs" :key="index" v-on:click="clickRun(index)">
+            <Run :title=run.title :description=run.description :date=run.date :img=run.img />
+          </div>
+        </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import Run from './Run.vue'
-import RunsJSON from '../resources/runs.json';
+import Run from "./Run.vue";
+import RunsJSON from "../resources/runs.json";
 export default {
   name: "Runs",
   components: {
@@ -21,10 +23,14 @@ export default {
   data: function() {
     return {
       runs: RunsJSON.runs
-    }
+    };
   },
+  methods: {
+    clickRun: function(index) {
+      this.$emit('clicked', index)
+    }
+  }
 };
-
 </script>
 
 
@@ -39,5 +45,9 @@ export default {
   margin-top: 3vh;
 }
 
-
+.scrollable {
+  height: 81vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
 </style>

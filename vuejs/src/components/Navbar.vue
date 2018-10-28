@@ -20,19 +20,16 @@
 
 
 <script>
-
 export default {
   name: "Navbar"
 };
-
 </script>
 
 
 <style scoped>
-
-.navbar {
+/* .navbar {
   height: 6vh;
-}
+} */
 .pathpartout_link {
   color: white;
   text-decoration: none;
@@ -40,5 +37,4 @@ export default {
 .bg-info-pathpartout {
   background-color: #009b00;
 }
-
 </style>

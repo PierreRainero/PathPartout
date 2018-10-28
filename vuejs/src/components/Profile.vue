@@ -1,11 +1,11 @@
 <template>
     <div class="row">
         <div class="col-md-4">
-            <Runs/>
+            <Runs @clicked="onClickChild"/>
         </div>
         <div class="col-md-8">
             <div style="margin-top:3vh">
-                <Map />
+                <GoogleMap ref="runIndex"/>
             </div>
         </div>
     </div>
@@ -13,17 +13,31 @@
 
 
 <script>
-import Map from "./Map.vue";
+import GoogleMap from "./GoogleMap.vue";
 import Runs from "./Runs.vue";
 export default {
   name: "Profile",
   components: {
-    Map,
+    GoogleMap,
     Runs
+  },
+  data() {
+      return {
+          indexRun: 0
+      }
+  },
+  methods: {
+    onClickChild (value) {
+      this.$refs.runIndex.setMarkers(value)
+    }
   }
 };
 </script>
 
 
 <style scoped>
+
+.row {
+    margin-right: 0px !important;
+}
 </style>

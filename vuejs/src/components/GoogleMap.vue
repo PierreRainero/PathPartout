@@ -1,42 +1,37 @@
 <template>
-  <div>
-    <!-- <div>
-      <label>
-        <gmap-autocomplete
-          @place_changed="setPlace">
-        </gmap-autocomplete>
-        <button @click="addMarker">Ajouter</button>
-      </label>
-      <br/>
-    </div>
-    <br> -->
+  <div class="container-fluid">
+    <div class="map">
     <gmap-map
       :center="center"
-      :zoom="12"
+      :zoom="14"
       id="googleMap"
-      style="height: 400px"
+      style="height: 85vh"
     >
       <gmap-marker
         :key="index"
         v-for="(m, index) in markers"
         :position="m.position"
-        @click="center=m.position"
       ></gmap-marker>
+
+      <gmap-polyline v-bind:path="path" v-bind:options="{ strokeColor:'#008000'}">
+         </gmap-polyline>
+         
     </gmap-map>
+  </div>
   </div>
 </template>
 
 <script>
+import RunsJSON from "../resources/runs.json";
 export default {
   name: "GoogleMap",
   data() {
     return {
-      // default to Montreal to keep it simple
-      // change this to whatever makes sense
-      center: { lat: 45.508, lng: -73.587 },
+      center: { lat: 43.615921, lng: 7.071835 },
+      currentPlace: null,
+      runs: RunsJSON.runs,
       markers: [],
-      places: [],
-      currentPlace: null
+      path: []
     };
   },
 
@@ -45,22 +40,6 @@ export default {
   },
 
   methods: {
-    // receives a place object via the autocomplete component
-    setPlace(place) {
-      this.currentPlace = place;
-    },
-    addMarker() {
-      if (this.currentPlace) {
-        const marker = {
-          lat: this.currentPlace.geometry.location.lat(),
-          lng: this.currentPlace.geometry.location.lng()
-        };
-        this.markers.push({ position: marker });
-        this.places.push(this.currentPlace);
-        this.center = marker;
-        this.currentPlace = null;
-      }
-    },
     geolocate: function() {
       navigator.geolocation.getCurrentPosition(position => {
         this.center = {
@@ -68,7 +47,20 @@ export default {
           lng: position.coords.longitude
         };
       });
+    },
+    setMarkers(index) {
+      this.path = null;
+      this.markers = this.runs[index].points;
+      this.path = this.runs[index].path;
+      this.center = this.path[0];
     }
   }
 };
 </script>
+
+<style scoped>
+.map {
+  border: solid 1px black;
+  margin-top: 3vh;
+}
+</style>
