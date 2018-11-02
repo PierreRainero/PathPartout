@@ -37,13 +37,14 @@ class MapController: UIViewController {
     }
     
     func updateLocation() {
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
         
-        // Creates a marker in the center of the map.
+        // Creates a marker at the user position.
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        marker.icon = UIImage(named: "hiker_icon")
         marker.title = "Your Position"
         marker.map = mapView
     }

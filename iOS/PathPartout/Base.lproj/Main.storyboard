@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gpt-wF-kb4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BED-zf-wMk">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6EO-GB-11c">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <connections>
                                     <segue destination="AjY-pt-bL5" kind="embed" id="iav-is-nLK"/>
                                 </connections>
@@ -44,12 +44,16 @@
         <!--Info Table View Controller-->
         <scene sceneID="xQ8-dd-csP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BoE-Ax-UbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="AjY-pt-bL5" customClass="InfoTableViewController" customModule="PathPartout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VsX-y7-b6M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="50s-Ts-Bak">
+                            <rect key="frame" x="0.0" y="113" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="85" id="wOb-Oh-sUB" customClass="InfosTableViewCell" customModule="PathPartout" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="85"/>
@@ -103,6 +107,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BoE-Ax-UbC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2713.04347826087" y="138.99456521739131"/>
         </scene>
@@ -131,8 +136,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oe-JY-P0x">
-                                <rect key="frame" x="0.0" y="69" width="414" height="618"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <connections>
                                     <segue destination="DPM-nm-SG9" kind="embed" id="XwK-mF-BEc"/>
                                 </connections>
@@ -145,7 +150,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EN-NQ-GCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="884.70764617691157"/>
+            <point key="canvasLocation" x="995.65217391304361" y="884.51086956521749"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="aYS-h0-uTh">
+            <objects>
+                <viewController storyboardIdentifier="loginvc" id="BED-zf-wMk" customClass="LoginViewController" customModule="PathPartout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AwN-wc-o4v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S1S-Ds-jZp">
+                                <rect key="frame" x="-43" y="118" width="500" height="500"/>
+                            </imageView>
+                            <stackView contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="idR-7R-Ep0">
+                                <rect key="frame" x="132" y="308" width="150" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="on6-pq-L3p">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
+                                        <color key="tintColor" name="Primaire"/>
+                                        <color key="textColor" name="STexte"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" textContentType="nickname"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yJk-Es-0EP">
+                                        <rect key="frame" x="0.0" y="39" width="150" height="34"/>
+                                        <color key="tintColor" name="Primaire"/>
+                                        <color key="textColor" name="STexte"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                    </textField>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzQ-ep-vVd">
+                                        <rect key="frame" x="0.0" y="78" width="150" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" name="PSombre"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonActionLogin:" destination="BED-zf-wMk" eventType="touchUpInside" id="MbS-0l-pOk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="tintColor" name="Primaire"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="cOq-kh-U5h"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S1S-Ds-jZp" firstAttribute="centerY" secondItem="AwN-wc-o4v" secondAttribute="centerY" id="3wu-Ph-jSe"/>
+                            <constraint firstItem="idR-7R-Ep0" firstAttribute="centerX" secondItem="AwN-wc-o4v" secondAttribute="centerX" id="WbU-fF-iC5"/>
+                            <constraint firstItem="S1S-Ds-jZp" firstAttribute="centerX" secondItem="AwN-wc-o4v" secondAttribute="centerX" id="gbA-uh-zDw"/>
+                            <constraint firstItem="idR-7R-Ep0" firstAttribute="centerY" secondItem="AwN-wc-o4v" secondAttribute="centerY" id="jKK-Z8-Dlo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TES-Oj-4xr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ow-ph-JPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1788.4057971014495" y="506.25000000000006"/>
         </scene>
         <!--Item-->
         <scene sceneID="Kh7-v4-NYv">
@@ -185,12 +249,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhy-bm-3Ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3786.4000000000001" y="-232.53373313343329"/>
+            <point key="canvasLocation" x="1317" y="-564"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="RnL-DJ-OQ6">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gpt-wF-kb4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarvc" automaticallyAdjustsScrollViewInsets="NO" id="gpt-wF-kb4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A2X-gR-RO7">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -198,7 +262,6 @@
                         <color key="selectedImageTintColor" name="Primaire"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eu9-Ar-x3j" kind="relationship" relationship="viewControllers" id="pLc-lU-hrG"/>
                         <segue destination="Y16-3Y-peV" kind="relationship" relationship="viewControllers" id="r47-6g-0mx"/>
                         <segue destination="b6k-N0-Xzx" kind="relationship" relationship="viewControllers" id="Yj0-mH-7Iv"/>
                     </connections>
@@ -212,7 +275,7 @@
             <objects>
                 <viewController id="DPM-nm-SG9" customClass="MapController" customModule="PathPartout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Tx-ad-ego" customClass="Map">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="WIH-YX-kR4"/>
@@ -243,8 +306,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="500" height="500"/>
+        <namedColor name="PSombre">
+            <color red="0.0" green="0.41899999976158142" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Primaire">
             <color red="0.0" green="0.60699999332427979" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="STexte">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

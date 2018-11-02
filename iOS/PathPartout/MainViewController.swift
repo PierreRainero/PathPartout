@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
         
-    let items = [["Tracer", "Faites vos trajets facilement et rapidement à l'aide de notre carte intéractive intégrée."],["Promener", "Explorez des points d'intêrets autours de vous, changez vous les idées avec de longues randonnées."],["Partager", "Echangez vos trajets et vos découvertes avec vos amis ou le reste de la communauté."]]
+    let items = [["Tour de St Phillipe", "Un petit tour pendant la pause repas."]]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
