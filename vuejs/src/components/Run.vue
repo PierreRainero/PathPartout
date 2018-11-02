@@ -16,7 +16,7 @@
 
 
 <script>
-import DeviceHelper from "../deviceHelper.js";
+import DeviceHelper from "../Helpers/deviceHelper.js";
 export default {
   name: "Run",
   props: ["title", "description", "date", "img"],
