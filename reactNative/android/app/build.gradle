@@ -137,6 +137,8 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-android-location-enabler')
+    compile project(':react-native-android-location-services-dialog-box')
     implementation project(':react-native-maps')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

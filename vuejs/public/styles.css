@@ -1,0 +1,19 @@
+.btn {
+    background-color: #009b00;
+}
+
+.form-signin-heading {
+    color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
