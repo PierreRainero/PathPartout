@@ -24,18 +24,18 @@ export default {
   data: function() {
     return {
       error: false,
-      helper: new AuthenticationHelper
+      helper: new AuthenticationHelper()
     };
   },
   methods: {
     login() {
-      let username = document.getElementById('inputEmail').value;
-      let password = document.getElementById('inputPassword').value;
+      let username = document.getElementById("inputEmail").value;
+      let password = document.getElementById("inputPassword").value;
       const validAuthentication = this.helper.validateLogIn(username, password);
       if (validAuthentication) {
-         this.$router.replace({ name: "Profile" });
-      }
-      else {
+        this.$emit("authenticated", true);
+        this.$router.replace({ name: "Profile" });
+      } else {
         this.error = true;
       }
     }
@@ -49,7 +49,7 @@ export default {
   max-width: 400px;
   width: 50%;
   margin: 0 auto;
-  background-color:rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .form-signin {

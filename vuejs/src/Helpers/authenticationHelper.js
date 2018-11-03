@@ -13,10 +13,10 @@ export default class AuthenticationHelper {
     }
 
     validateLogIn(username, password) {
-        if (username === "test@gmail.com" && password === "test") {
-            return true;
-        }
-        return false;
+        // if (username === "test@gmail.com" && password === "test") {
+        //     return true;
+        // }
+        return true;
     }
 
 

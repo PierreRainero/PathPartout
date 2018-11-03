@@ -1,10 +1,10 @@
 <template>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 myCol">
             <Runs @clicked="onClickChild"/>
         </div>
-        <div class="col-md-8">
-            <div style="margin-top:3vh">
+        <div v-if="!helper.isMobileDevice()" class="col-md-8 myCol">
+            <div>
                 <GoogleMap ref="runIndex"/>
             </div>
         </div>
@@ -13,6 +13,7 @@
 
 
 <script>
+import DeviceHelper from "../Helpers/deviceHelper.js";
 import GoogleMap from "./GoogleMap.vue";
 import Runs from "./Runs.vue";
 export default {
@@ -23,7 +24,8 @@ export default {
   },
   data() {
       return {
-          indexRun: 0
+          indexRun: 0,
+          helper: new DeviceHelper
       }
   },
   methods: {
@@ -39,5 +41,10 @@ export default {
 
 .row {
     margin-right: 0px !important;
+}
+
+.myCol {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 </style>

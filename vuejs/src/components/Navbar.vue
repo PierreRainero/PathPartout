@@ -9,8 +9,10 @@
   <b-collapse is-nav id="nav_collapse">
 
     <b-navbar-nav class="ml-auto">
-      <b-nav-item class="navbar-item"><router-link to="/LogIn" class="nav-link">Connexion</router-link></b-nav-item>
-      <b-nav-item class="navbar-item"><router-link to="/SignIn" class="nav-link">Inscription</router-link></b-nav-item>
+      <b-nav-item class="navbar-item" v-if="!authenticated"><router-link to="/LogIn" class="nav-link">Connexion</router-link></b-nav-item>
+      <b-nav-item class="navbar-item" v-if="!authenticated"><router-link to="/SignIn" class="nav-link">Inscription</router-link></b-nav-item>
+      <b-nav-item class="navbar-item" v-if="authenticated"><router-link to="/LogIn" class="nav-link">Mes tracers</router-link></b-nav-item>
+      <b-nav-item class="navbar-item" v-if="authenticated"><router-link to="/" class="nav-link">Se deconnecter</router-link></b-nav-item>
     </b-navbar-nav>
 
   </b-collapse>
@@ -21,7 +23,8 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  props: ["authenticated"],
 };
 </script>
 

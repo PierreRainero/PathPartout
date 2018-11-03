@@ -1,11 +1,11 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid myCol">
     <div class="map">
     <gmap-map
       :center="center"
       :zoom="14"
       id="googleMap"
-      style="height: 85vh"
+      style="height: 92vh"
     >
       <gmap-marker
         :key="index"
@@ -59,8 +59,10 @@ export default {
 </script>
 
 <style scoped>
-.map {
-  border: solid 1px black;
-  margin-top: 3vh;
+
+.myCol {
+    padding-left: 0px;
+    padding-right: 0px;
 }
+
 </style>
