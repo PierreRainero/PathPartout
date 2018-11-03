@@ -6,7 +6,7 @@ import PrivateRoute from './util/guard/PrivateRoute'
 import NavigationBar from './components/navigation-bar/NavigationBar';
 import Home from './components/home/Home';
 import Login from './components/connection/login/Login';
-import Map from './components/map/Map';
+import RidePage from './components/ride/RidePage';
 
 import './App.scss';
 
@@ -17,7 +17,7 @@ class App extends Component {
         <NavigationBar />
         <Route exact path="/" component={ Home } />
         <Route exact={true} path="/login" component={ Login } />
-        <PrivateRoute exact={true} path='/map' component={ Map } />
+        <PrivateRoute exact={true} path='/rides' component={ RidePage } />
       </div>
     );
   }

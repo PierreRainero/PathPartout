@@ -23,24 +23,24 @@ class Login extends React.Component {
         this.loginUser = this.loginUser.bind(this);
     }
 
-    handleEmailChange(event) {
+    handleEmailChange= (event) => {
         this.setState({ email: event.target.value });
     }
 
-    handlePasswordChange(event) {
+    handlePasswordChange= (event) => {
         this.setState({ password: event.target.value });
     }
 
-    loginUser(event) {
+    loginUser= (event) => {
         const connectedUser = AuthenticatorService.login(this.state.email, this.state.password);
         if(connectedUser !== null) {
-            this.props.history.push('/map');
+            this.props.history.push('/rides');
         }
 
         event.preventDefault();
     }
 
-    formValidity() {
+    formValidity= () => {
         return this.state.email!=="" && this.state.password!=="";
     }
 

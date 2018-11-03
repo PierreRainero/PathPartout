@@ -19,9 +19,9 @@ class NavigationBar extends React.Component {
         let rightPart;
         if (AuthenticatorService.isLogged()) {
             rightPart = <div className="nav-body">
-                            <Link to="/map" onClick={this.toggle}>
+                            <Link to="/rides" onClick={this.toggle}>
                                 <i className="fa fa-map"></i>
-                                <span> Carte</span>
+                                <span> Trajets</span>
                             </Link>
                             <a href="#" >
                                 <i className="fa fa-user-circle"></i>

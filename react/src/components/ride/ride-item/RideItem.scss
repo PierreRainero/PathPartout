@@ -1,0 +1,35 @@
+@import '../../../shared';
+
+.item {
+    padding: 1em 0.4em;
+    background: #FFFFFF;
+
+    border-radius: 0;
+    border-bottom: 1px solid #F4F4F4;
+
+    box-sizing: border-box;
+}
+
+.title {
+    font-weight: 600;
+    color: $primary-color;
+}
+
+.description {
+    display: block;
+    color: $secondary-color-dark;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.badge {
+    padding: 4px;
+    margin: 2px;
+
+    text-align: right;
+    
+    background-color: $primary-color;
+    color: $primary-color-text;
+    border-radius: 2px;
+}

@@ -32,7 +32,7 @@ class HomeBoard extends React.Component {
                             <i className="box-img fa fa-map"></i>
                         </div>
                         <div className="pure-u-3-4">
-                            <h4 className="box-header">Tracer</h4>
+                            <h4 className="box-header info-title">Tracer</h4>
                             <p className="box-content secondary-dark">
                                 Faites vos trajets facilement et rapidement à l'aide de notre carte intéractive intégrée.
                             </p>
