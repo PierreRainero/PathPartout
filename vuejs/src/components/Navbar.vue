@@ -11,8 +11,7 @@
     <b-navbar-nav class="ml-auto">
       <b-nav-item class="navbar-item" v-if="!authenticated"><router-link to="/LogIn" class="nav-link">Connexion</router-link></b-nav-item>
       <b-nav-item class="navbar-item" v-if="!authenticated"><router-link to="/SignIn" class="nav-link">Inscription</router-link></b-nav-item>
-      <b-nav-item class="navbar-item" v-if="authenticated"><router-link to="/LogIn" class="nav-link">Mes tracers</router-link></b-nav-item>
-      <b-nav-item class="navbar-item" v-if="authenticated"><router-link to="/" class="nav-link">Se deconnecter</router-link></b-nav-item>
+      <b-nav-item class="navbar-item" v-if="authenticated" v-on:click="logout()"><router-link to="/" class="nav-link">Se deconnecter</router-link></b-nav-item>
     </b-navbar-nav>
 
   </b-collapse>
@@ -25,6 +24,11 @@
 export default {
   name: "Navbar",
   props: ["authenticated"],
+  methods: {
+    logout() {
+      this.$emit("authenticated", false);
+    }
+  }
 };
 </script>
 

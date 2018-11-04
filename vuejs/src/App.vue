@@ -1,7 +1,7 @@
 <template>
 
   <div id="app">
-    <Navbar :authenticated="isAuthenticated()" />
+    <Navbar :authenticated="isAuthenticated()" @authenticated="setAuthenticated" />
     <router-view @authenticated="setAuthenticated" />
   </div>
 

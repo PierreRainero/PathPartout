@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="left-panel">
-      <div class="navbar-brand">Mes tracers</div>
+      <div class="navbar-brand" v-on:click="resetRuns()">Mes tracers</div>
         <div class="scrollable">
           <div v-for="(run, index) in runs" :key="index" v-on:click="clickRun(index)">
-            <Run :title=run.title :description=run.description :date=run.date :img=run.img  :clicked=isClicked(index) />
+            <Run :title=run.title :description=run.description :date=run.date :img=run.img  :clicked=isClicked(index) :length=run.length :pois=run.pois />
           </div>
         </div>
     </div>
@@ -23,7 +23,7 @@ export default {
   data: function() {
     return {
       runs: RunsJSON.runs,
-      clickedItem: 0
+      clickedItem: null
     };
   },
   methods: {
@@ -33,6 +33,11 @@ export default {
     },
     isClicked: function(index) {
       return index == this.clickedItem;
+    },
+    resetRuns: function() {
+      this.clickedItem = null;
+      this.$emit("reset");
+
     }
   }
 };
@@ -46,9 +51,7 @@ export default {
   color: white;
   padding-right: 0px;
   margin-right: 0px;
-}
-.left-panel {
-  /* border: 1px solid black; */
+  cursor: pointer;
 }
 
 .scrollable {

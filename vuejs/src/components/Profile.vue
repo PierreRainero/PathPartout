@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-4 myCol">
-            <Runs @clicked="onClickChild"/>
+            <Runs @clicked="onClickChild" @reset="reset"/>
         </div>
         <div v-if="!helper.isMobileDevice()" class="col-md-8 myCol">
             <div>
@@ -23,14 +23,17 @@ export default {
     Runs
   },
   data() {
-      return {
-          indexRun: 0,
-          helper: new DeviceHelper
-      }
+    return {
+      indexRun: 0,
+      helper: new DeviceHelper()
+    };
   },
   methods: {
-    onClickChild (value) {
-      this.$refs.runIndex.setMarkers(value)
+    onClickChild(value) {
+      this.$refs.runIndex.setMarkers(value);
+    },
+    reset() {
+      this.$refs.runIndex.resetMarkers();
     }
   }
 };
@@ -38,13 +41,12 @@ export default {
 
 
 <style scoped>
-
 .row {
-    margin-right: 0px !important;
+  margin-right: 0px !important;
 }
 
 .myCol {
-    padding-left: 0px;
-    padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 </style>

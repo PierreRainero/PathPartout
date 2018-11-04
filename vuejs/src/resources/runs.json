@@ -1,106 +1,115 @@
 {
-    "runs" : [
-      {
-        "title": "Rando bois de Biot",
-        "description": "Petite rando facile",
-        "date": "31/10/2018",
-        "img": "http://www.ecovoyageurs.com/media/reviews/photos/thumbnail/280x200c/47/16/45/rando-net-68-1477394147.jpg",
-        "path": [
-          {"lat": 43.640491, "lng": 7.051051},
-          {"lat": 43.641727, "lng": 7.055808},
-          {"lat": 43.643542, "lng": 7.064517}
-        ],
-        "points": [
-          {"position": {"lat": 43.640491, "lng": 7.051051}},
-          {"position": {"lat": 43.643542, "lng": 7.064517}}
-        ]
-      },
-      {
-        "title": "Ballade sur le plateau de Caussols",
-        "description": "Parfait pour une remise en forme",
-        "date": "10/10/2018",
-        "img": "http://zarb.org/~gc/boohalb/rando/thumbnails-rando200107.jpg",
-        "path": [
-          {"lat": 43.745544, "lng": 6.911344},
-          {"lat": 43.749377, "lng": 6.919820},
-          {"lat": 43.751934, "lng": 6.917678},
-          {"lat": 43.754897, "lng": 6.928651},
-          {"lat": 43.763300, "lng": 6.919070},
-          {"lat": 43.752990, "lng": 6.903952},
-          {"lat": 43.744159, "lng": 6.908317}
-        ],
-        "points": [
-          {"position": {"lat": 43.745544, "lng": 6.911344}},
-          {"position": {"lat": 43.744159, "lng": 6.908317}}
-        ]
-      },
-      {
-        "title": "Rando bois de Biot",
-        "description": "Petite rando facile",
-        "date": "31/10/2018",
-        "img": "http://areches-beaufort.com/wp-content/uploads/cache//noeStarter/images/280__200__crop__~wp-content~uploads~noesit~medias~836883~p9210387.jpg",
-        "path": [
-          {"lat": 43.640491, "lng": 7.051051},
-          {"lat": 43.641727, "lng": 7.055808},
-          {"lat": 43.643542, "lng": 7.064517}
-        ],
-        "points": [
-          {"position": {"lat": 43.640491, "lng": 7.051051}},
-          {"position": {"lat": 43.643542, "lng": 7.064517}}
-        ]
-      },
-      {
-        "title": "Ballade au bord de la Brague",
-        "description": "Facile parfait pour se rafraichir",
-        "date": "10/10/2018",
-        "img": "http://areches-beaufort.com/wp-content/uploads/cache//noeStarter/images/280__200__crop__~wp-content~uploads~noesit~medias~836885~p8310165.jpg",
-        "path": [
-          {"lat": 43.745544, "lng": 6.911344},
-          {"lat": 43.749377, "lng": 6.919820},
-          {"lat": 43.751934, "lng": 6.917678},
-          {"lat": 43.754897, "lng": 6.928651},
-          {"lat": 43.763300, "lng": 6.919070},
-          {"lat": 43.752990, "lng": 6.903952},
-          {"lat": 43.744159, "lng": 6.908317}
-        ],
-        "points": [
-          {"position": {"lat": 43.745544, "lng": 6.911344}},
-          {"position": {"lat": 43.744159, "lng": 6.908317}}
-        ]
-      },
-      {
-        "title": "Rando bois de Biot",
-        "description": "Petite rando facile",
-        "date": "31/10/2018",
-        "img": "http://areches-beaufort.com/wp-content/uploads/cache//noeStarter/images/280__200__crop__~wp-content~uploads~noesit~medias~836886~chalets-templier.jpg",
-        "path": [
-          {"lat": 43.640491, "lng": 7.051051},
-          {"lat": 43.641727, "lng": 7.055808},
-          {"lat": 43.643542, "lng": 7.064517}
-        ],
-        "points": [
-          {"position": {"lat": 43.640491, "lng": 7.051051}},
-          {"position": {"lat": 43.643542, "lng": 7.064517}}
-        ]
-      },
-      {
-        "title": "Ballade au bord de la Brague",
-        "description": "Facile parfait pour se rafraichir",
-        "date": "10/10/2018",
-        "img": "http://www.ecovoyageurs.com/media/reviews/photos/thumbnail/280x200c/66/a1/01/IMG-3995-8-1469615209.jpg",
-        "path": [
-          {"lat": 43.745544, "lng": 6.911344},
-          {"lat": 43.749377, "lng": 6.919820},
-          {"lat": 43.751934, "lng": 6.917678},
-          {"lat": 43.754897, "lng": 6.928651},
-          {"lat": 43.763300, "lng": 6.919070},
-          {"lat": 43.752990, "lng": 6.903952},
-          {"lat": 43.744159, "lng": 6.908317}
-        ],
-        "points": [
-          {"position": {"lat": 43.745544, "lng": 6.911344}},
-          {"position": {"lat": 43.744159, "lng": 6.908317}}
-        ]
-      }
-    ]
-  }
+  "runs": [
+    {
+      "title": "Rando bois de Biot",
+      "description": "Petite rando facile",
+      "length": "2.63 km",
+      "date": "31/10/2018",
+      "img": "run-1.png",
+      "path": [
+        {
+          "lat": 43.640491,
+          "lng": 7.051051
+        },
+        {
+          "lat": 43.641727,
+          "lng": 7.055808
+        },
+        {
+          "lat": 43.643542,
+          "lng": 7.064517
+        }
+      ],
+      "pois": [
+        {
+          "position": {
+            "lat": 43.640491,
+            "lng": 7.051051
+          },
+          "name": "Depart"
+        },
+        {
+          "position": {
+            "lat": 43.641727,
+            "lng": 7.055808
+          },
+          "name": "poi"
+        },
+        {
+          "position": {
+            "lat": 43.643542,
+            "lng": 7.064517
+          },
+          "name": "Arrivé"
+        }
+      ]
+    },
+    {
+      "title": "Ballade sur le plateau de Caussols",
+      "description": "Parfait pour une remise en forme",
+      "length": "8.30 km",
+      "date": "10/10/2018",
+      "img": "run-2.png",
+      "path": [
+        {
+          "lat": 43.745544,
+          "lng": 6.911344
+        },
+        {
+          "lat": 43.749377,
+          "lng": 6.919820
+        },
+        {
+          "lat": 43.751934,
+          "lng": 6.917678
+        },
+        {
+          "lat": 43.754897,
+          "lng": 6.928651
+        },
+        {
+          "lat": 43.763300,
+          "lng": 6.919070
+        },
+        {
+          "lat": 43.752990,
+          "lng": 6.903952
+        },
+        {
+          "lat": 43.744159,
+          "lng": 6.908317
+        }
+      ],
+      "pois": [
+        {
+          "position": {
+            "lat": 43.745544,
+            "lng": 6.911344
+          },
+          "name": "Depart"
+        },
+        {
+          "position": {
+            "lat": 43.744159,
+            "lng": 6.908317
+          },
+          "name": "Arrivé"
+        },
+        {
+          "position": {
+            "lat": 43.754897,
+            "lng": 6.928651
+          },
+          "name": "poi"
+        },
+        {
+          "position": {
+            "lat": 43.751934,
+            "lng": 6.917678
+          },
+          "name": "ruins"
+        }
+      ]
+    }
+  ]
+}
