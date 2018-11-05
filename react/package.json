@@ -8,6 +8,7 @@
     "@types/react": "^16.4.18",
     "ajv": "^6.5.4",
     "ajv-keywords": "^3.2.0",
+    "css-modal": "^1.5.0",
     "font-awesome": "^4.7.0",
     "google-map-react": "^1.0.9",
     "node-sass": "^4.9.3",

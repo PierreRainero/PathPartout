@@ -28,6 +28,25 @@ class RideService {
         
         return rides;
     }
+
+    /**
+     * MOCKED
+     * Return a ride according to his id
+     * @param {integer} id id to use
+     */
+    static getRideById(id){
+        const rides = this.getUserRides(null);
+        switch(id){
+            case '1':
+             return rides[0];
+
+            case '2':
+             return rides[1];
+
+            default:
+             return undefined;
+        }
+    }
 }
 
 export default RideService;  

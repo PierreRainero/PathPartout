@@ -1,14 +1,4 @@
-@import '../../../shared';
-
-.item {
-    padding: 1em 0.4em;
-    background: #FFFFFF;
-
-    border-radius: 0;
-    border-bottom: 1px solid #F4F4F4;
-
-    box-sizing: border-box;
-}
+@import '../ride-list/RideList';
 
 .title {
     font-weight: 600;
@@ -21,6 +11,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 767px) {
+    .description {
+        margin-bottom: 6px;
+    }
 }
 
 .badge {

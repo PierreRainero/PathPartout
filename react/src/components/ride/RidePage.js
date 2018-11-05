@@ -13,7 +13,6 @@ class RidePage extends React.Component {
 	constructor(props) {
 		super(props);
 
-
 		this.rides = RideService.getUserRides(userStore.getState().connectedUser);
 
 		this.state = {
@@ -22,20 +21,32 @@ class RidePage extends React.Component {
 	}
 
 	selectRide= (ride) => {
-		this.setState({selectedRide : ride});
+		const width = window.innerWidth;
+		if (width > 768) {
+			this.setState({selectedRide : ride});
+		}else {
+			this.props.history.push({
+				pathname: '/map/'+ride.id
+			});
+		}
 	}
 
+	createNewRide= () => {
+		this.props.history.push({
+			pathname: '/map',
+			state: { inCreationMode: true }
+		});
+	}
 
 	render() {
 		return (
 			<div className="pure-g">
 				<div className="pure-u-1 pure-u-md-1-4">
-					<RideList rides={this.rides} callback={this.selectRide}/>
+					<RideList rides={this.rides} callbackSelectRide={this.selectRide} callbackNewRide={this.createNewRide}/>
 				</div>
-				<div className="pure-u-1 pure-u-md-3-4">
+				<div className="pure-u-1 pure-u-md-3-4 hidden-md">
 					<Map
 						ride={this.state.selectedRide}
-						onRef={ref => (this.child = ref)}
 					/>
 				</div>
 			</div>

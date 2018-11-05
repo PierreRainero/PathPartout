@@ -9,3 +9,4 @@
 - [React](https://reactjs.org/) 16.5.2
 - [PureCss](https://purecss.io/) 1.0.0
 - [Sass](https://sass-lang.com/guide) 4.9.3
+- [Google Maps API](https://cloud.google.com/maps-platform/) 3+

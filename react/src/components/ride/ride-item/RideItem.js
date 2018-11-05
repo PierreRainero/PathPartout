@@ -1,5 +1,7 @@
 import React from "react";
 
+import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids.scss';
+import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids-responsive.scss';
 import './RideItem.scss';
 
 class RideItem extends React.Component {
@@ -19,7 +21,7 @@ class RideItem extends React.Component {
 						{this.props.ride.description}
 					</div>
 				</div>
-				<div className="text-right pure-u-1 pure-u-md-1-4">
+				<div className="text-right pure-u-1 pure-u-md-1-4 hidden-lg">
 					<span className="badge">{this.convertInKm(this.props.ride.getDistance())} km</span>
 				</div>
 			</div>
