@@ -1,10 +1,13 @@
 <template>
   <div>
     <div class="left-panel">
-      <div class="navbar-brand" v-on:click="resetRuns()">Mes tracers</div>
+      <div class="navbar-brand" v-on:click="resetRuns()">{{ clickedItem == null ? 'Mes tracers' : '	&lt; Mes tracers'}}</div>
         <div class="scrollable">
           <div v-for="(run, index) in runs" :key="index" v-on:click="clickRun(index)">
             <Run :title=run.title :description=run.description :date=run.date :img=run.img  :clicked=isClicked(index) :length=run.length :pois=run.pois />
+          </div>
+          <div class="btn-add">
+            <button type="button" class="btn btn-success" v-on:click="addRun()">+ Ajouter un tracer</button>
           </div>
         </div>
     </div>
@@ -38,6 +41,10 @@ export default {
       this.clickedItem = null;
       this.$emit("reset");
 
+    },
+    addRun: function() {
+      console.log('laa');
+
     }
   }
 };
@@ -59,5 +66,9 @@ export default {
   overflow: scroll;
   overflow-x: hidden;
   /* overflow-y: hidden; */
+}
+
+.btn-add {
+  margin-top: 30px;
 }
 </style>
