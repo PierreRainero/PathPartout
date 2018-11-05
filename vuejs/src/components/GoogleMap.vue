@@ -72,6 +72,9 @@ export default {
       this.pois = ListRunsJSON.runs[0].pois;
       this.path = ListRunsJSON.runs[0].path;
     },
+    isAddingRun() {
+      this.pois = null;
+    },
     defineImage(m) {
       if (m.name == "Depart") {
         return this.departImage;

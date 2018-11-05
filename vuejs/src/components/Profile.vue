@@ -1,7 +1,8 @@
 <template>
     <div class="row">
         <div class="col-md-4 myCol">
-            <Runs @clicked="onClickChild" @reset="reset"/>
+            <Runs v-if="this.isAddingRun == false" @clicked="onClickChild" @reset="reset" @addRun="addRun"/>
+            <AddRun v-if="this.isAddingRun == true" @back="back" />
         </div>
         <div v-if="!helper.isMobileDevice()" class="col-md-8 myCol">
             <div>
@@ -16,16 +17,19 @@
 import DeviceHelper from "../Helpers/deviceHelper.js";
 import GoogleMap from "./GoogleMap.vue";
 import Runs from "./Runs.vue";
+import AddRun from "./AddRun.vue";
 export default {
   name: "Profile",
   components: {
     GoogleMap,
-    Runs
+    Runs,
+    AddRun
   },
   data() {
     return {
       indexRun: 0,
-      helper: new DeviceHelper()
+      helper: new DeviceHelper(),
+      isAddingRun: false
     };
   },
   methods: {
@@ -33,6 +37,14 @@ export default {
       this.$refs.runIndex.setMarkers(value);
     },
     reset() {
+      this.$refs.runIndex.resetMarkers();
+    },
+    addRun() {
+      this.isAddingRun = true;
+      this.$refs.runIndex.isAddingRun();
+    },
+    back() {
+      this.isAddingRun = false;
       this.$refs.runIndex.resetMarkers();
     }
   }

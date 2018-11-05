@@ -43,8 +43,7 @@ export default {
 
     },
     addRun: function() {
-      console.log('laa');
-
+      this.$emit("addRun");
     }
   }
 };
