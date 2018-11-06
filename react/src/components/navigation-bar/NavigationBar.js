@@ -33,19 +33,21 @@ class NavigationBar extends React.Component {
                             <Link to="/login" onClick={this.toggle}>
                                 Connexion
                             </Link>
-                            <a href="#">Inscription</a>
+                            <Link to="/registration" onClick={this.toggle}>
+                                Inscription
+                            </Link>
                         </div>;
         }
 
         return (
             <div className="topnav" id="navbar-container">
                 <div className="nav-header">
-                    <Link to="/">
+                    <Link to="/" onClick={this.toggle}>
                         Path'Partout
                 </Link>
                 </div>
                 {rightPart}
-                <a href="javascript:void(0);" className="icon" onClick={this.toggle}>
+                <a href="# " className="icon" onClick={this.toggle}>
                     <i className="fa fa-bars"></i>
                 </a>
             </div>

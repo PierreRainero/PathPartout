@@ -43,6 +43,10 @@ class Map extends React.Component {
 		} else {
 			this.updateCenter(props.ride.pois[0].lat, props.ride.pois[0].lng);
 		}
+
+		this.handleNameChange = this.handleNameChange.bind(this);
+		this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+		this.handleRideTitleChange = this.handleRideTitleChange.bind(this);
 	}
 
 	getNextId = () => {

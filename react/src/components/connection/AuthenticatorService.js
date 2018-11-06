@@ -15,6 +15,16 @@ class AuthenticatorService {
     }
 
     /**
+     * MOCKED
+     * Register a new user in the system
+     * @param {User} user user to insert
+     */
+    static register(user){
+        userStore.setState({ connectedUser: user});
+        return userStore.getState().connectedUser;
+    }
+
+    /**
      * Return if an user is connected to the app or not (used by the guard)
      */
     static isLogged() {
