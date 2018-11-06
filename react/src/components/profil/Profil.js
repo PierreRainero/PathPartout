@@ -2,6 +2,8 @@ import React from "react";
 
 import userStore from '../connection/userStore';
 
+import RideService from '../ride/RideService';
+
 import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids.scss';
 import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids-responsive.scss';
 import 'font-awesome/css/font-awesome.min.css';
@@ -19,8 +21,9 @@ class Profil extends React.Component {
                     </div>
                     <div className="pure-u-3-4">
                         <h4 className="box-header">{this.user.firstName} {this.user.lastName}</h4>
-                        <div className="box-content secondary-dark">
+                        <div className="box-content secondary-dark breakable">
                             <p><i className="fa fa-envelope"></i><span> {this.user.email}</span></p>
+                            <p><i className="fa fa-map"></i><span> {RideService.numberOfRide(userStore.getState().connectedUser)} trajets</span></p>
                         </div>
                     </div>
                 </div>

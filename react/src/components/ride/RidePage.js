@@ -42,7 +42,7 @@ class RidePage extends React.Component {
 		}
 	}
 
-	createNewRide= () => {
+	activeCreationMode= () => {
 		if (this.isOnDesktop()) {
 			this.setState({creationMode : true});
 			this.setState({selectedRide : undefined});
@@ -54,15 +54,23 @@ class RidePage extends React.Component {
 		}
 	}
 
+	newRideCreated= (ride) => {
+		this.setState({selectedRide : ride});
+	}
+
 	render() {
 		return (
 			<div className="pure-g">
 				<div className="pure-u-1 pure-u-md-1-4">
-					<RideList rides={this.rides} callbackSelectRide={this.selectRide} callbackNewRide={this.createNewRide}/>
+					<RideList rides={this.rides}
+						callbackSelectRide={this.selectRide}
+						callbackNewRide={this.activeCreationMode}
+					/>
 				</div>
 				<div className="pure-u-1 pure-u-md-3-4 hidden-md">
 					<Map
 						creationMode={this.state.creationMode}
+						callbackAfterCreation={this.newRideCreated}
 						ride={this.state.selectedRide}
 					/>
 				</div>
