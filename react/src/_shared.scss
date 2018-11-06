@@ -10,6 +10,10 @@ a:active,
 a:focus {
     color: $primary-color-dark;
 }
+
+.clickable {
+    cursor: pointer;
+}
 // ---------------------------
 
 // -------- Typography -------
@@ -19,6 +23,10 @@ a:focus {
 
 .text-left {
     text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .text-center {
@@ -42,6 +50,10 @@ a:focus {
 .center {
     display:block;
     margin:auto; 
+}
+
+.right {
+    float: right;
 }
 
 .container {
