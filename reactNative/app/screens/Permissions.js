@@ -46,10 +46,10 @@ export default class Home extends Component<Props> {
                 </View>
                 <View style={styles.permButtonView}>
                     { this.state.gpsEnabled === false ?
-                        <Button onPress={this.connect} style={styles.permButton}>
+                        <Button onPress={this.enableGPS} style={styles.permButton}>
                             <Text>Activer votre GPS</Text>
                         </Button> :
-                        <Button iconLeft onPress={this.enableGPS} disabled style={{color: "#009b00"}}>
+                        <Button iconLeft disabled style={{color: "#009b00"}}>
                             <View style={styles.permButtonIcon}>
                                 <Icon name='md-checkmark' color={'#009b00'}/>
                             </View>
@@ -75,10 +75,8 @@ export default class Home extends Component<Props> {
     enableGPS(){
         RNAndroidLocationEnabler.promptForEnableLocationIfNeeded({interval: 10000, fastInterval: 5000})
             .then(data => {
-                this.setState({currentPage: 'map'});
-            }).catch(err => {
-            this.setState({currentPage: 'permissions'});
-        });
+                this.props.nextScreen();
+            }).catch(err => {});
     }
 }
 

@@ -31,7 +31,7 @@ export default class App extends Component<Props> {
             <Container>
                 { this.state.currentPage === 'home' ? <Home callback={this.connect} /> : null }
                 { this.state.currentPage === 'map' ? <Map /> : null }
-                { this.state.currentPage === 'permissions' ? <PermissionsScreen /> : null }
+                { this.state.currentPage === 'permissions' ? <PermissionsScreen nextScreen={() => this.setState({currentPage: 'map'})}/> : null }
             </Container>
         </StyleProvider>
     );
