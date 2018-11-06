@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import AuthenticatorService from '../connection/AuthenticatorService';
 
+import 'font-awesome/css/font-awesome.min.css';
+
 import './NavigationBar.scss';
 
 class NavigationBar extends React.Component {
@@ -23,10 +25,10 @@ class NavigationBar extends React.Component {
                                 <i className="fa fa-map"></i>
                                 <span> Trajets</span>
                             </Link>
-                            <a href="#" >
+                            <Link to="/profil" onClick={this.toggle}>
                                 <i className="fa fa-user-circle"></i>
                                 <span> Profil</span>
-                            </a>
+                            </Link>
                         </div >;
         } else {
             rightPart = <div className="nav-body">
@@ -44,7 +46,7 @@ class NavigationBar extends React.Component {
                 <div className="nav-header">
                     <Link to="/" onClick={this.toggle}>
                         Path'Partout
-                </Link>
+                    </Link>
                 </div>
                 {rightPart}
                 <a href="# " className="icon" onClick={this.toggle}>

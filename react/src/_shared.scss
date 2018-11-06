@@ -146,8 +146,11 @@ a:focus {
 .box-header {
     margin: 0;
 }
-.box-content {
+p.box-content {
     font-size: 80%;
+    margin: 0.4em 0;
+}
+div.box-content {
     margin: 0.4em 0;
 }
 // ---------------------------

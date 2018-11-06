@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 
 import Marker from './Marker';
+
 import Ride from '../ride/Ride';
+import Poi from "../ride/Poi";
 
 import RideService from "../ride/RideService";
 
@@ -12,9 +14,9 @@ import 'purecss-sass/vendor/assets/stylesheets/purecss/_forms.scss';
 import 'purecss-sass/vendor/assets/stylesheets/purecss/_buttons.scss';
 import 'purecss-sass/vendor/assets/stylesheets/purecss/_grids.scss';
 import 'css-modal/build/modal.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 import './Map.scss';
-import Poi from "../ride/Poi";
 
 class Map extends React.Component {
 	constructor(props) {
