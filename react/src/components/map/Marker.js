@@ -11,8 +11,10 @@ class Marker extends React.Component {
         };
     }
 
-    changeDisplay= ()=> {
+    changeDisplay= (event)=> {
         this.setState({clicked : !this.state.clicked});
+
+        event.preventDefault();
     }
 
     render() {

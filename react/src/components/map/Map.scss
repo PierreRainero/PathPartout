@@ -1,3 +1,17 @@
 .hidden {
     display: hidden;
 }
+
+.modal-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.pure-control-group > input.header-map {
+    margin: 2px 4px;
+    width: 70%;
+
+    display: inline;
+    text-align: center;
+}
