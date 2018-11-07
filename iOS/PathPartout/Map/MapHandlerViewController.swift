@@ -9,6 +9,7 @@
 import UIKit
 
 class MapHandlerViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -18,9 +19,17 @@ class MapHandlerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.masksToBounds = false
+        button.layer.shadowRadius = 1.0
+        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = button.frame.width / 2
         // Do any additional setup after loading the view.
+        
+        let course = Shared.shared.companyName ?? "None"
+        print(course)
     }
-    
 
     /*
     // MARK: - Navigation

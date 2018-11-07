@@ -9,12 +9,6 @@
 import UIKit
 import GoogleMaps
 
-struct Point {
-    var type : String
-    var latitude : Double
-    var longitude : Double
-}
-
 class MapController: UIViewController {
     
     var locationManager = CLLocationManager()
