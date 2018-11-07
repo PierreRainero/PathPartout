@@ -1,10 +1,11 @@
 <template>
   <div class="runCard card" v-bind:class="{ isActive: clicked }">
     <div class="row">
-      <div class="col-md-3 vertical-align">
-        <img class="card-img" v-if="!helper.isMobileDevice()" :src="img" >
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <img class="" v-if="!helper.isMobileDevice()" :src="img" >
       </div>
-      <div class="col-md-7 vertical-align">
+      <div class="col-md-7">
         <div class="card-body-right">
           <b>{{title}}</b>
           <p>{{description}}</p>
@@ -13,9 +14,10 @@
           <button>Voir sur la carte</button>
         </div>
       </div>
-      <div class="col-md-2 vertical-align">
+      <div class="col-md-1">
         <h6><span class="badge badge-secondary" style="background-color: #009b00">{{length}}</span></h6>
       </div>
+      <div class="col-md-1"></div>
     </div>
   </div>
 </template>
