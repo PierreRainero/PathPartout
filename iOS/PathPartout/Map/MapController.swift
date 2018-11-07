@@ -9,12 +9,26 @@
 import UIKit
 import GoogleMaps
 
+struct Point {
+    var type : String
+    var latitude : Double
+    var longitude : Double
+}
+
 class MapController: UIViewController {
     
     var locationManager = CLLocationManager()
     var mapView: GMSMapView!
     var latitude : Double = 0
     var longitude : Double = 0
+    
+    // List of points. TODO : get it from an other controller
+    var locations = [
+        Point(type: "start", latitude: 43.616100, longitude: 7.073171),
+        Point(type: "", latitude: 43.617911, longitude: 7.074644),
+        Point(type: "", latitude: 43.622734, longitude: 7.0756081),
+        Point(type: "finish", latitude: 43.620458, longitude: 7.070573)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +61,36 @@ class MapController: UIViewController {
         marker.icon = UIImage(named: "hiker_icon")
         marker.title = "Your Position"
         marker.map = mapView
+        
+        displayPointsOfInterest(mapView)
+    }
+
+    /**
+        Display the different point of interest
+     
+            - mapView: Map in which points will be displayed
+    */
+    func displayPointsOfInterest(_ mapView: GMSMapView) {
+        let path = GMSMutablePath()
+        
+        for location in locations{
+            path.add(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) // Add point to path
+            let marker = GMSMarker()
+            
+            marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+            // Use an icon
+            if (location.type == "start") { marker.icon = UIImage(named: "start_icon") }
+            else if (location.type == "finish") { marker.icon = UIImage(named: "finish_icon") }
+            else { marker.icon = GMSMarker.markerImage(with: UIColor(named: "PClair")) }
+            marker.title = location.type
+            marker.map = mapView
+        }
+        
+        let rectangle = GMSPolyline(path: path)
+        rectangle.strokeWidth = 5
+        rectangle.strokeColor = UIColor(named: "PSombre")!
+        rectangle.map = mapView
+        self.view = mapView
     }
 }
 
