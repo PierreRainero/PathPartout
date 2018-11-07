@@ -1,15 +1,13 @@
 import {Component} from "react";
-import {View, Text} from "native-base";
+import {View, Fab, Icon} from "native-base";
 import React from "react";
-import {StyleSheet, Alert} from "react-native";
+import {StyleSheet} from "react-native";
 import MapView, {Marker, Polyline} from "react-native-maps";
-import Permissions from 'react-native-permissions';
 
 const path = [
     {
         latitude: 43.616100,
-        longitude: 7.073171,
-        type: 'start'
+        longitude: 7.073171
     },
     {
         latitude: 43.617911,
@@ -17,16 +15,13 @@ const path = [
     },
     {
         latitude:43.622734,
-        longitude: 7.0756081,
-        type: 'picnic'
+        longitude: 7.0756081
     },
     {
         latitude: 43.620458,
-        longitude: 7.070573,
-        type: 'finish'
+        longitude: 7.070573
     }
 ];
-const picnicMarker = require('../assets/img/picnic.png');
 const startMarker = require('../assets/img/start.png');
 const finishMarker = require('../assets/img/finish.png');
 
@@ -43,46 +38,43 @@ export default class Home extends Component<Props> {
     };
 
     componentDidMount() {
-        this.mounted = true;
+        this.setRegionToUserLocation();
     }
 
-    getMarkerInfos(type){
-        switch(type){
-            case 'start':
+    getMarkerInfos(index, size){
+        switch(index){
+            case 0:
                 return {
                     name: 'Point de départ',
                     image: startMarker
                 };
-            case 'finish':
+            case size-1:
                 return {
                     name: 'Arrivée',
                     image: finishMarker
-                };
-            case 'picnic':
-                return {
-                    name: 'Pause repas',
-                    image: picnicMarker
                 };
             default:
                 return null;
         }
     }
 
+    setRegionToUserLocation(){
+        return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(position => this.setState({region: {...this.state.region, latitude: position.coords.latitude, longitude: position.coords.longitude}}), e => reject(e)));
+    }
+
     render() {
         const mapStyle = require('../assets/customMapStyle.json');
-        const markerImage = require('../assets/img/hiker.png');
         return (
             <View style={styles.container}>
                 <MapView
                     style={styles.map}
                     region={this.state.region}
                     customMapStyle={mapStyle}
-                    followsUserLocation={true}
-                    showsMyLocationButton={true}
                     showsUserLocation={true}
+                    showsMyLocationButton={true}
                 >
                     {path.map((marker, i) => {
-                        const markerInfos = this.getMarkerInfos(marker.type);
+                        const markerInfos = this.getMarkerInfos(i, path.length);
                         if(markerInfos)
                             return (
                                 <Marker
@@ -103,6 +95,14 @@ export default class Home extends Component<Props> {
                         strokeWidth={1}
                     />
                 </MapView>
+                <Fab
+                    active={this.state.active}
+                    containerStyle={{ }}
+                    style={{ backgroundColor: '#009b00' }}
+                    position="bottomRight"
+                    onPress={() => this.setState({ active: !this.state.active })}>
+                    <Icon name="md-walk" />
+                </Fab>
             </View>
         );
     }
