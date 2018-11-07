@@ -1,9 +1,19 @@
 @import '../../../shared';
 
-.products-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.item {
+    padding: 1em 0.4em;
+    background: #FFFFFF;
+
+    border-radius: 0;
+    border-bottom: 1px solid #F4F4F4;
 
     box-sizing: border-box;
+}
+
+.item:hover {
+    background: $secondary-color-light;
+}
+
+.item.first:hover {
+    background: #FFFFFF;
 }

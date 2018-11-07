@@ -44,6 +44,12 @@ a:focus {
         display: none !important;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .hidden-lg {
+        display: none !important;
+    }
+}
 // ---------------------------
 
 // ---------- Layers ---------
@@ -140,8 +146,11 @@ a:focus {
 .box-header {
     margin: 0;
 }
-.box-content {
+p.box-content {
     font-size: 80%;
+    margin: 0.4em 0;
+}
+div.box-content {
     margin: 0.4em 0;
 }
 // ---------------------------
@@ -156,5 +165,27 @@ a:focus {
 .button-primary:active,
 .button-primary:focus {
     background-color: $primary-color-dark;
+}
+
+.button-danger {
+    color: $primary-color-text;
+    background-color: $danger-color;
+}
+
+.button-danger:hover,
+.button-danger:active,
+.button-danger:focus {
+    background-color: $danger-color-dark;
+}
+// ---------------------------
+
+// ----------- Form ----------
+.no-resizable{
+    resize: none;
+}
+
+.fill-parent{
+    width: 100%;
+    margin: 4px;
 }
 // ---------------------------

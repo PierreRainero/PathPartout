@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import Banner from '../../home/banner/Banner';
 
@@ -17,16 +18,14 @@ class Login extends React.Component {
             email: "",
             password: ""
         };
-
+        
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handlePasswordChange = this.handlePasswordChange.bind(this);
-        this.loginUser = this.loginUser.bind(this);
     }
 
     handleEmailChange= (event) => {
         this.setState({ email: event.target.value });
     }
-
     handlePasswordChange= (event) => {
         this.setState({ password: event.target.value });
     }
@@ -67,5 +66,15 @@ class Login extends React.Component {
         );
     }
 }
+
+Login.defaultProps = {
+    email: "",
+    password: ""
+};
+
+Login.propTypes = {
+    email: PropTypes.string,
+    password: PropTypes.string
+};
 
 export default Login;
