@@ -2,7 +2,7 @@
   <div class="runCard card" v-bind:class="{ isActive: clicked }">
     <div class="row">
       <div class="col-md-3 vertical-align">
-        <img class="card-img" v-if="!helper.isMobileDevice()" :src="setImage()" >
+        <img class="card-img" v-if="!helper.isMobileDevice()" :src="img" >
       </div>
       <div class="col-md-7 vertical-align">
         <div class="card-body-right">
@@ -23,8 +23,6 @@
 
 <script>
 import DeviceHelper from "../Helpers/deviceHelper.js";
-import Run1 from "../resources/run-1.png";
-import Run2 from "../resources/run-2.png";
 export default {
   name: "Run",
   props: ["title", "description", "date", "img", "clicked", "length", "pois"],
@@ -32,16 +30,6 @@ export default {
     return {
       helper: new DeviceHelper
     };
-  },
-  methods: {
-    setImage() {
-      if (this.img == "run-1.png") {
-        return Run1;
-      }
-      if (this.img == "run-2.png") {
-        return Run2;
-      }
-    }
   }
 };
 </script>

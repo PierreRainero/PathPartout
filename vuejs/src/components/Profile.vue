@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-4 myCol">
             <Runs v-if="this.isAddingRun == false" @clicked="onClickChild" @reset="reset" @addRun="addRun"/>
-            <AddRun v-if="this.isAddingRun == true" @back="back" />
+            <AddRun v-if="this.isAddingRun == true" @back="back" @newMarker="newMarker" />
         </div>
         <div v-if="!helper.isMobileDevice()" class="col-md-8 myCol">
             <div>
@@ -46,6 +46,9 @@ export default {
     back() {
       this.isAddingRun = false;
       this.$refs.runIndex.resetMarkers();
+    },
+    newMarker(value) {
+      this.$refs.runIndex.newMarker(value);
     }
   }
 };

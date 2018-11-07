@@ -73,27 +73,29 @@ export default {
       this.path = ListRunsJSON.runs[0].path;
     },
     isAddingRun() {
-      this.pois = null;
+      this.pois = [];
+      this.path = [];
     },
     defineImage(m) {
-      if (m.name == "Depart") {
+      if (m.name == "Depart")
         return this.departImage;
-      }
-      if (m.name == "Arrivé") {
+      if (m.name == "Arrivé")
         return this.arriveImage;
-      }
-      if (m.name == "poi") {
+      if (m.name == "poi")
         return this.poiImage;
-      }
-      if (m.name == "ruins") {
+      if (m.name == "ruins")
         return this.ruinsImage;
-      }
-      if (m.name == "1") {
+      if (m.name == "1")
         return Run1;
-      }
-      if (m.name == "2") {
+      if (m.name == "2")
         return Run2;
-      }
+    },
+    newMarker(value) {
+      let index = value.indexOf(',');
+      let lat = parseFloat(value.substring(0, value.indexOf(',')));
+      let lng = parseFloat(value.substring( value.indexOf(',') + 1, value.length));
+      this.pois.push({"position": {"lat": lat, "lng": lng}});
+      this.path.push({"lat": lat, "lng": lng});
     }
   }
 };

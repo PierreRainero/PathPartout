@@ -11,8 +11,11 @@
                 <textarea class="form-control" id="description" rows="3" placeholder="Idéal avec les enfants pour se rafraîchir."></textarea>
             </div>
             <div class="form-group">
-                <label for="description"><b>3.</b> Ajouter des points en cliquant sur la carte pour définir votre tracer</label>
-                <p>{{this.nbPoints > 1 ? `${this.nbPoints} points ajoutés à votre tracer` : `${this.nbPoints} point ajouté à votre tracer`}}</p>
+                <label for="description"><b>3.</b> Ajouter des points pour définir votre tracer</label>
+                <gmap-autocomplete style="width: 100%; margin-bottom: 10px" id="inputMarker"
+                  @place_changed="setPlace">
+                </gmap-autocomplete>
+                <button type="button" class="btn btn-success" v-on:click="addMarker()">Ajouter un point</button>
             </div>
         </div>
           <div class="btn-add">
@@ -33,12 +36,22 @@ export default {
     };
   },
   methods: {
+    setPlace(place) {
+      this.currentPlace = place;
+    },
     back: function() {
       this.$emit("back");
     },
     add: function() {
       console.log("add run");
       this.$emit("back");
+    },
+    addMarker: function() {
+      if (this.currentPlace) {
+        let marker = this.currentPlace.geometry.location.lat() + ',' + this.currentPlace.geometry.location.lng();
+        this.$emit("newMarker", marker);
+        document.getElementById('inputMarker').value = '';
+      }
     }
   }
 };
@@ -63,7 +76,7 @@ export default {
 }
 
 .btn-add {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .formulaire {

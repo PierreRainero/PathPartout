@@ -5,7 +5,7 @@
       "description": "Petite rando facile",
       "length": "2.63 km",
       "date": "31/10/2018",
-      "img": "run-1.png",
+      "img": "http://image.noelshack.com/fichiers/2018/45/3/1541602067-run-1.png",
       "path": [
         {
           "lat": 43.640491,
@@ -49,7 +49,7 @@
       "description": "Parfait pour une remise en forme",
       "length": "8.30 km",
       "date": "10/10/2018",
-      "img": "run-2.png",
+      "img": "http://image.noelshack.com/fichiers/2018/45/3/1541602069-run-2.png",
       "path": [
         {
           "lat": 43.745544,
