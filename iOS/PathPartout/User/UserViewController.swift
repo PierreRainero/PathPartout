@@ -9,6 +9,7 @@
 import UIKit
 
 class UserViewController: UIViewController {
+    @IBOutlet weak var name: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -18,6 +19,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        name.text = Shared.shared.userName
         // Do any additional setup after loading the view.
     }
     

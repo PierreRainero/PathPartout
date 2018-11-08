@@ -10,8 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet weak var userName: UITextField!
+    
     @IBAction func buttonActionLogin(_ sender: Any) {
         UserDefaults.standard.set(true, forKey: "status")
+        if(userName.text != nil) { Shared.shared.userName = userName.text }
         Switcher.updateRootVC()
     }
     

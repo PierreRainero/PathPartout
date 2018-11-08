@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gpt-wF-kb4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BED-zf-wMk">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -108,10 +108,25 @@
                     <view key="view" contentMode="scaleToFill" id="Q6f-K3-Ayr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ot-j8-65B">
+                                <rect key="frame" x="171.66666666666666" y="350" width="71" height="36"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7ot-j8-65B" firstAttribute="centerX" secondItem="Q6f-K3-Ayr" secondAttribute="centerX" id="Dan-zt-3So"/>
+                            <constraint firstItem="7ot-j8-65B" firstAttribute="centerY" secondItem="Q6f-K3-Ayr" secondAttribute="centerY" id="RNz-Ox-q8Q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4T5-dr-g8N"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Zgb-Da-EXI"/>
+                    <connections>
+                        <outlet property="name" destination="7ot-j8-65B" id="XES-67-hyY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwm-bA-vxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +247,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TES-Oj-4xr"/>
                     </view>
+                    <connections>
+                        <outlet property="userName" destination="on6-pq-L3p" id="Aab-tp-eJj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ow-ph-JPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
