@@ -16,15 +16,6 @@ class MapController: UIViewController {
     var latitude : Double = 0
     var longitude : Double = 0
     
-    // List of points. TODO : get it from an other controller
-    /*
-    var locations = [
-        Point(type: "start", latitude: 43.616100, longitude: 7.073171),
-        Point(type: "", latitude: 43.617911, longitude: 7.074644),
-        Point(type: "", latitude: 43.622734, longitude: 7.0756081),
-        Point(type: "finish", latitude: 43.620458, longitude: 7.070573)
-    ]*/
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,16 +41,18 @@ class MapController: UIViewController {
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         self.view = mapView
         
+        let currentPos = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
         // Creates a marker at the user position.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        marker.position = currentPos
         marker.icon = UIImage(named: "hiker_icon")
         marker.title = "Your Position"
         marker.map = mapView
         
-        Shared.shared.currentLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        Shared.shared.currentLocation = currentPos
         
-        displayPointsOfInterest(mapView)
+        displayPointsOfInterest(mapView, currentPos)
     }
 
     /**
@@ -67,7 +60,7 @@ class MapController: UIViewController {
      
             - mapView: Map in which points will be displayed
     */
-    func displayPointsOfInterest(_ mapView: GMSMapView) {
+    func displayPointsOfInterest(_ mapView: GMSMapView, _ currentPos: CLLocationCoordinate2D) {
         let path = GMSMutablePath()
         let race = Shared.shared.run
         
@@ -84,6 +77,15 @@ class MapController: UIViewController {
             if (location.type == "start") { marker.icon = UIImage(named: "start_icon") }
             else if (location.type == "finish") { marker.icon = UIImage(named: "finish_icon") }
             else { marker.icon = GMSMarker.markerImage(with: UIColor(named: "PClair")) }
+            
+            if(location.latitude == currentPos.latitude && location.longitude == currentPos.longitude){
+                let alert = UIAlertController(title: race?.name, message: "Bravo, vous avez trouvé un nouveau point d'interêt !", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                    NSLog("The \"OK\" alert occured.")
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
             marker.title = location.type
             marker.map = mapView
         }
