@@ -85,7 +85,7 @@ class MapController: UIViewController {
             else { marker.icon = GMSMarker.markerImage(with: UIColor(named: "PClair")) }
             
             if(location.latitude == currentPosition.latitude && location.longitude == currentPosition.longitude){
-                mapHandlerVC?.notifyUser()
+                mapHandlerVC?.notifyUser(location)
             }
             
             marker.title = location.type

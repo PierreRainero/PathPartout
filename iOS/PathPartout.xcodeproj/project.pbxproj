@@ -10,13 +10,14 @@
 		7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2012E321938020007BA7EB /* RunTableViewController.swift */; };
 		7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185C0217015CC00A41679 /* AppDelegate.swift */; };
 		7B3185C6217015CC00A41679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C4217015CC00A41679 /* Main.storyboard */; };
-		7B3185C8217015CE00A41679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C7217015CE00A41679 /* Assets.xcassets */; };
 		7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */; };
 		7B3185D321701A7B00A41679 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185D221701A7B00A41679 /* MapController.swift */; };
 		7B5FE13721935C5700580829 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FE13621935C5700580829 /* Shared.swift */; };
 		7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD302177AD8C00794FD5 /* UserViewController.swift */; };
 		7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */; };
 		7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC00DB421934141003EC423 /* PopUpViewController.swift */; };
+		7BD76FC42194F2C300C7A3BD /* PointOfInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */; };
+		7BD76FC62194F8C400C7A3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD76FC52194F8C400C7A3BD /* Assets.xcassets */; };
 		7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE61EA8218C385C00B62010 /* LoginViewController.swift */; };
 		7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE61EAA218C3D5800B62010 /* Switcher.swift */; };
 		BDD66F5992EB302E9318A547 /* libPods-PathPartout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */; };
@@ -30,7 +31,6 @@
 		7B3185BD217015CC00A41679 /* PathPartout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathPartout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3185C0217015CC00A41679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3185C5217015CC00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B3185C7217015CE00A41679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B3185CA217015CE00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B3185CC217015CE00A41679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3185D221701A7B00A41679 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		7B8DAD302177AD8C00794FD5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandlerViewController.swift; sourceTree = "<group>"; };
 		7BC00DB421934141003EC423 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestViewController.swift; sourceTree = "<group>"; };
+		7BD76FC52194F8C400C7A3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE61EA8218C385C00B62010 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7BE61EAA218C3D5800B62010 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,10 +100,11 @@
 				7BE61EAA218C3D5800B62010 /* Switcher.swift */,
 				7B5FE13621935C5700580829 /* Shared.swift */,
 				7B3185C4217015CC00A41679 /* Main.storyboard */,
-				7B3185C7217015CE00A41679 /* Assets.xcassets */,
 				7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */,
 				7B3185CC217015CE00A41679 /* Info.plist */,
 				7B2012E321938020007BA7EB /* RunTableViewController.swift */,
+				7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */,
+				7BD76FC52194F8C400C7A3BD /* Assets.xcassets */,
 			);
 			path = PathPartout;
 			sourceTree = "<group>";
@@ -210,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */,
-				7B3185C8217015CE00A41679 /* Assets.xcassets in Resources */,
+				7BD76FC62194F8C400C7A3BD /* Assets.xcassets in Resources */,
 				7B3185C6217015CC00A41679 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +280,7 @@
 				7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */,
 				7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */,
 				7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */,
+				7BD76FC42194F2C300C7A3BD /* PointOfInterestViewController.swift in Sources */,
 				7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */,
 				7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */,
 				7B5FE13721935C5700580829 /* Shared.swift in Sources */,

@@ -9,17 +9,6 @@
 import UIKit
 import GoogleMaps
 
-struct Run {
-    var name: String
-    var description: String
-    var points: [Point]
-}
-
-struct Point {
-    var type : String
-    var latitude : Double
-    var longitude : Double
-}
 
 class InfosTableViewCell: UITableViewCell {
     @IBOutlet weak var cellTitle: UILabel!
