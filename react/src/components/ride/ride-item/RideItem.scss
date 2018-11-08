@@ -1,0 +1,31 @@
+@import '../ride-list/RideList';
+
+.title {
+    font-weight: 600;
+    color: $primary-color;
+}
+
+.description {
+    display: block;
+    color: $secondary-color-dark;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 767px) {
+    .description {
+        margin-bottom: 6px;
+    }
+}
+
+.badge {
+    padding: 4px;
+    margin: 2px;
+
+    text-align: right;
+    
+    background-color: $primary-color;
+    color: $primary-color-text;
+    border-radius: 2px;
+}

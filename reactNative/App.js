@@ -9,57 +9,49 @@
 import React, {Component} from 'react';
 import {StyleProvider, Button, Container, Footer, FooterTab, Icon, Text} from 'native-base';
 import getTheme from './native-base-theme/components';
+import Permissions from "react-native-permissions";
+import {Alert} from "react-native";
+import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 
 import Home from "./app/screens/Home";
 import Map from "./app/screens/Map";
+import PermissionsScreen from "./app/screens/Permissions"
 
 type Props = {};
 export default class App extends Component<Props> {
 
-  state = {
-    selectedTab: 'home'
-  }
+    state = {
+        currentPage: 'home'
+    }
+    connect = this.connect.bind(this);
 
-  render() {
+    render() {
     return (
         <StyleProvider  style={getTheme()}>
             <Container>
-                { this.state.selectedTab === 'home' ? <Home /> : null }
-                { this.state.selectedTab === 'map' ? <Map /> : null }
-                { this.state.selectedTab === 'account' ? <Map /> : null }
-                <Footer>
-                    <FooterTab>
-                        <Button
-                            vertical
-                            active={this.state.selectedTab === 'home' ? true : null}
-                            onPress={() => this.setState({selectedTab: 'home'})}>
-                            <Icon
-                                active={this.state.selectedTab === 'home' ? true : null}
-                                name="home" />
-                            <Text>Accueil</Text>
-                        </Button>
-                        <Button
-                            vertical
-                            active={this.state.selectedTab === 'map' ? true : null}
-                            onPress={() => this.setState({selectedTab: 'map'})}>
-                            <Icon
-                                active={this.state.selectedTab === 'map' ? true : null}
-                                name="map" />
-                            <Text>Carte</Text>
-                        </Button>
-                        <Button
-                            vertical
-                            active={this.state.selectedTab === 'account' ? true : null}
-                            onPress={() => this.setState({selectedTab: 'account'})}>
-                            <Icon
-                                active={this.state.selectedTab === 'account' ? true : null}
-                                name="md-people" />
-                            <Text>Profil</Text>
-                        </Button>
-                    </FooterTab>
-                </Footer>
+                { this.state.currentPage === 'home' ? <Home callback={this.connect} /> : null }
+                { this.state.currentPage === 'map' ? <Map /> : null }
+                { this.state.currentPage === 'permissions' ? <PermissionsScreen nextScreen={() => this.setState({currentPage: 'map'})}/> : null }
             </Container>
         </StyleProvider>
     );
-  }
+    }
+
+    connect(){
+      this.checkLocationEnabled();
+    }
+
+    async checkLocationEnabled() {
+        await Permissions.check('location').then(authorized => {
+            if(authorized === 'denied')
+                this.setState({currentPage: 'permissions'});
+            else
+                RNAndroidLocationEnabler.promptForEnableLocationIfNeeded({interval: 10000, fastInterval: 5000})
+                    .then(data => {
+                        this.setState({currentPage: 'map'});
+                    }).catch(err => {
+                        this.setState({currentPage: 'permissions'});
+                });
+        })
+    }
 }
