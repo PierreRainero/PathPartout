@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  MapHandlerViewController.swift
 //  PathPartout
 //
 //  Created by Fabien DURANDO on 17/10/2018.
@@ -8,19 +8,29 @@
 
 import UIKit
 
-class UserViewController: UIViewController {
+class MapHandlerViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var PopUpView: UIView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        tabBarItem = UITabBarItem(title: "PROFIL", image: UIImage(named: "account_icon"), tag: 3)
+        tabBarItem = UITabBarItem(title: "CARTE", image: UIImage(named: "carte_icon"), tag: 2)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.masksToBounds = false
+        button.layer.shadowRadius = 1.0
+        button.layer.shadowOpacity = 0.5
+        button.layer.cornerRadius = button.frame.width / 2
     }
     
+    func trst(){
+        print("abc")
+    }
 
     /*
     // MARK: - Navigation
