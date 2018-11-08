@@ -1,18 +1,21 @@
 //
-//  MapHandlerViewController.swift
+//  LoginViewController.swift
 //  PathPartout
 //
-//  Created by Fabien DURANDO on 17/10/2018.
+//  Created by Fabien DURANDO on 02/11/2018.
 //  Copyright © 2018 Fabien DURANDO. All rights reserved.
 //
 
 import UIKit
 
-class MapHandlerViewController: UIViewController {
+class LoginViewController: UIViewController {
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        tabBarItem = UITabBarItem(title: "CARTE", image: UIImage(named: "carte_icon"), tag: 2)
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBAction func buttonActionLogin(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "status")
+        if(userName.text != nil) { Shared.shared.userName = userName.text }
+        Switcher.updateRootVC()
     }
     
     override func viewDidLoad() {
@@ -20,7 +23,6 @@ class MapHandlerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

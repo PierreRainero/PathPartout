@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2012E321938020007BA7EB /* RunTableViewController.swift */; };
 		7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185C0217015CC00A41679 /* AppDelegate.swift */; };
 		7B3185C6217015CC00A41679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C4217015CC00A41679 /* Main.storyboard */; };
 		7B3185C8217015CE00A41679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C7217015CE00A41679 /* Assets.xcassets */; };
 		7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */; };
 		7B3185D321701A7B00A41679 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185D221701A7B00A41679 /* MapController.swift */; };
-		7B51C82D2179C58D000563A4 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B51C82C2179C58D000563A4 /* InfoTableViewController.swift */; };
+		7B5FE13721935C5700580829 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FE13621935C5700580829 /* Shared.swift */; };
 		7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD302177AD8C00794FD5 /* UserViewController.swift */; };
-		7B8DAD332177ADA300794FD5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD322177ADA300794FD5 /* MainViewController.swift */; };
 		7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */; };
-		7B8DAD392177E79B00794FD5 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD382177E79B00794FD5 /* CollectionViewCell.swift */; };
+		7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC00DB421934141003EC423 /* PopUpViewController.swift */; };
+		7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE61EA8218C385C00B62010 /* LoginViewController.swift */; };
+		7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE61EAA218C3D5800B62010 /* Switcher.swift */; };
 		BDD66F5992EB302E9318A547 /* libPods-PathPartout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,7 @@
 		05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B96FAA474B4FC8D591F257 /* Pods-PathPartoutReborn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartoutReborn.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn.release.xcconfig"; sourceTree = "<group>"; };
 		7B1CA2B62170986E0041EDE5 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2012E321938020007BA7EB /* RunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
 		7B3185BD217015CC00A41679 /* PathPartout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathPartout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3185C0217015CC00A41679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3185C5217015CC00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,11 +34,12 @@
 		7B3185CA217015CE00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B3185CC217015CE00A41679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3185D221701A7B00A41679 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
-		7B51C82C2179C58D000563A4 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		7B5FE13621935C5700580829 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		7B8DAD302177AD8C00794FD5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
-		7B8DAD322177ADA300794FD5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandlerViewController.swift; sourceTree = "<group>"; };
-		7B8DAD382177E79B00794FD5 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7BC00DB421934141003EC423 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		7BE61EA8218C385C00B62010 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7BE61EAA218C3D5800B62010 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		96F631056FC1983884800F50 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABE07567ECEA7F1571DF631 /* Pods-PathPartout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.debug.xcconfig"; sourceTree = "<group>"; };
 		BE7233A8919E40785EA5B098 /* Pods-PathPartout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartout.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartout/Pods-PathPartout.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,19 +90,53 @@
 		7B3185BF217015CC00A41679 /* PathPartout */ = {
 			isa = PBXGroup;
 			children = (
+				7BC00DB62193464B003EC423 /* List */,
+				7BC00DB321933002003EC423 /* User */,
+				7BC00DB221932FE2003EC423 /* Login */,
+				7BC00DB121932FBC003EC423 /* Map */,
 				7B3185C0217015CC00A41679 /* AppDelegate.swift */,
+				7BE61EAA218C3D5800B62010 /* Switcher.swift */,
+				7B5FE13621935C5700580829 /* Shared.swift */,
 				7B3185C4217015CC00A41679 /* Main.storyboard */,
-				7B8DAD322177ADA300794FD5 /* MainViewController.swift */,
-				7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */,
-				7B8DAD382177E79B00794FD5 /* CollectionViewCell.swift */,
-				7B8DAD302177AD8C00794FD5 /* UserViewController.swift */,
-				7B3185D221701A7B00A41679 /* MapController.swift */,
 				7B3185C7217015CE00A41679 /* Assets.xcassets */,
 				7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */,
 				7B3185CC217015CE00A41679 /* Info.plist */,
-				7B51C82C2179C58D000563A4 /* InfoTableViewController.swift */,
+				7B2012E321938020007BA7EB /* RunTableViewController.swift */,
 			);
 			path = PathPartout;
+			sourceTree = "<group>";
+		};
+		7BC00DB121932FBC003EC423 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */,
+				7B3185D221701A7B00A41679 /* MapController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		7BC00DB221932FE2003EC423 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7BE61EA8218C385C00B62010 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7BC00DB321933002003EC423 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				7B8DAD302177AD8C00794FD5 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		7BC00DB62193464B003EC423 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				7BC00DB421934141003EC423 /* PopUpViewController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		DD5F30FCD68411A68F3DC67B /* Frameworks */ = {
@@ -233,13 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B51C82D2179C58D000563A4 /* InfoTableViewController.swift in Sources */,
 				7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */,
 				7B3185D321701A7B00A41679 /* MapController.swift in Sources */,
-				7B8DAD392177E79B00794FD5 /* CollectionViewCell.swift in Sources */,
+				7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */,
+				7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */,
+				7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */,
+				7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */,
 				7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */,
 				7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */,
-				7B8DAD332177ADA300794FD5 /* MainViewController.swift in Sources */,
+				7B5FE13721935C5700580829 /* Shared.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
