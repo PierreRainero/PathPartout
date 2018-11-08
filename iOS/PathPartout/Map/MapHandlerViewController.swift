@@ -10,6 +10,7 @@ import UIKit
 
 class MapHandlerViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var PopUpView: UIView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,10 +26,10 @@ class MapHandlerViewController: UIViewController {
         button.layer.shadowRadius = 1.0
         button.layer.shadowOpacity = 0.5
         button.layer.cornerRadius = button.frame.width / 2
-        // Do any additional setup after loading the view.
-        
-        let course = Shared.shared.companyName ?? "None"
-        print(course)
+    }
+    
+    func trst(){
+        print("abc")
     }
 
     /*

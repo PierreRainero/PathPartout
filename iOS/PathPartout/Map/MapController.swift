@@ -17,12 +17,13 @@ class MapController: UIViewController {
     var longitude : Double = 0
     
     // List of points. TODO : get it from an other controller
+    /*
     var locations = [
         Point(type: "start", latitude: 43.616100, longitude: 7.073171),
         Point(type: "", latitude: 43.617911, longitude: 7.074644),
         Point(type: "", latitude: 43.622734, longitude: 7.0756081),
         Point(type: "finish", latitude: 43.620458, longitude: 7.070573)
-    ]
+    ]*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,8 @@ class MapController: UIViewController {
         marker.title = "Your Position"
         marker.map = mapView
         
+        Shared.shared.currentLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        
         displayPointsOfInterest(mapView)
     }
 
@@ -66,8 +69,13 @@ class MapController: UIViewController {
     */
     func displayPointsOfInterest(_ mapView: GMSMapView) {
         let path = GMSMutablePath()
+        let race = Shared.shared.run
         
-        for location in locations{
+        if(race == nil) { return }
+        
+        let locations = race?.points
+        
+        for location in locations! {
             path.add(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) // Add point to path
             let marker = GMSMarker()
             

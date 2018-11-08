@@ -17,12 +17,6 @@ struct Info {
     
 }
 
-class InfosTableViewCell: UITableViewCell {
-    @IBOutlet weak var picture: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var textContent: UILabel!
-}
-
 class InfoTableViewController: UITableViewController {
     /*
     let infos = [
@@ -52,13 +46,13 @@ class InfoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! InfosTableViewCell
 
         let info = infos[indexPath.item]
-        
+        /*
         cell.title.text = info.title
         cell.textContent.text = info.text
         cell.textContent.lineBreakMode = .byWordWrapping
         cell.textContent.numberOfLines = 0
         cell.picture.image = UIImage(named: info.icon)
-
+        */
         
         cell.detailTextLabel?.numberOfLines = 0
         cell.detailTextLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping;

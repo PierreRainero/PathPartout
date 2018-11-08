@@ -25,8 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Color of the Status Bar elements
         UINavigationBar.appearance().barStyle = .blackOpaque
-        
         UINavigationBar.appearance().isTranslucent = false
+        
+        UIApplication.shared.statusBarStyle = .lightContent
         
         return true
     }
