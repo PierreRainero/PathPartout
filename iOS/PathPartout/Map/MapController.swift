@@ -12,9 +12,15 @@ import GoogleMaps
 class MapController: UIViewController {
     
     var locationManager = CLLocationManager()
-    var mapView: GMSMapView!
+    var mapHandlerVC:MapHandlerViewController?
+    var currentPosition : CLLocationCoordinate2D!
     var latitude : Double = 0
     var longitude : Double = 0
+    var run: Run!
+    var mapCreated: Bool = false
+    var camera: GMSCameraPosition!
+    var mapView: GMSMapView!
+    var userMarker: GMSMarker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,23 +42,26 @@ class MapController: UIViewController {
         }
     }
     
+    // Update the location of the user marker. Also create map if needed.
     func updateLocation() {
-        let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 15.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        self.view = mapView
+        if !mapCreated {
+            camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longitude, zoom: 15.0)
+            mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+            self.view = mapView
+            userMarker = GMSMarker()
+            mapCreated = true
+        }
         
-        let currentPos = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        currentPosition = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        mapView.camera = GMSCameraPosition.camera(withLatitude: currentPosition.latitude, longitude: currentPosition.longitude, zoom: mapView.camera.zoom)
         
         // Creates a marker at the user position.
-        let marker = GMSMarker()
-        marker.position = currentPos
-        marker.icon = UIImage(named: "hiker_icon")
-        marker.title = "Your Position"
-        marker.map = mapView
+        userMarker.position = currentPosition
+        userMarker.icon = UIImage(named: "hiker_icon")
+        userMarker.title = "Your Position"
+        userMarker.map = mapView
         
-        Shared.shared.currentLocation = currentPos
-        
-        displayPointsOfInterest(mapView, currentPos)
+        displayPointsOfInterest()
     }
 
     /**
@@ -60,15 +69,12 @@ class MapController: UIViewController {
      
             - mapView: Map in which points will be displayed
     */
-    func displayPointsOfInterest(_ mapView: GMSMapView, _ currentPos: CLLocationCoordinate2D) {
+    func displayPointsOfInterest() {
         let path = GMSMutablePath()
-        let race = Shared.shared.run
         
-        if(race == nil) { return }
-        
-        let locations = race?.points
-        
-        for location in locations! {
+        if(run == nil) {return}
+        let locations = run.points
+        for location in locations {
             path.add(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) // Add point to path
             let marker = GMSMarker()
             
@@ -78,12 +84,8 @@ class MapController: UIViewController {
             else if (location.type == "finish") { marker.icon = UIImage(named: "finish_icon") }
             else { marker.icon = GMSMarker.markerImage(with: UIColor(named: "PClair")) }
             
-            if(location.latitude == currentPos.latitude && location.longitude == currentPos.longitude){
-                let alert = UIAlertController(title: race?.name, message: "Bravo, vous avez trouvé un nouveau point d'interêt !", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                    NSLog("The \"OK\" alert occured.")
-                }))
-                self.present(alert, animated: true, completion: nil)
+            if(location.latitude == currentPosition.latitude && location.longitude == currentPosition.longitude){
+                mapHandlerVC?.notifyUser()
             }
             
             marker.title = location.type
@@ -95,6 +97,12 @@ class MapController: UIViewController {
         rectangle.strokeColor = UIColor(named: "PSombre")!
         rectangle.map = mapView
         self.view = mapView
+    }
+    
+    // When new path is created, new map needed !
+    func newPath(){
+        mapCreated = false
+        updateLocation()
     }
 }
 

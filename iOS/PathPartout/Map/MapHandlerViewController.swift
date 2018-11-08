@@ -11,6 +11,14 @@ import UIKit
 class MapHandlerViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var PopUpView: UIView!
+    var mapController:MapController!
+    var runs: [Run] = [
+        Run(name: "Tour de St Phillipe", description: "Un petit tour pendant la pause repas.", points: [Point(type: "start", latitude: 43.616100, longitude: 7.073171),Point(type: "", latitude: 43.617911, longitude: 7.074644),Point(type: "", latitude: 43.622734, longitude: 7.0756081),Point(type: "finish", latitude: 43.620458, longitude: 7.070573)]),
+        
+        Run(name: "Tournée des bars", description: "Tournée des nombreux bars des alentours.", points: [Point(type: "start", latitude: 43.618673, longitude: 7.0748659),Point(type: "", latitude: 43.6177577, longitude: 7.0746102),Point(type: "", latitude: 43.6212068, longitude: 7.0639032),Point(type: "finish", latitude: 43.619034, longitude: 7.0565848)]),
+        
+        Run(name: "Chasse aux sangliers", description: "Petite session de chasse avec l'ami Bealou.", points: [Point(type: "start", latitude: 43.6176093, longitude: 7.0681092),Point(type: "", latitude: 43.6184054, longitude: 7.0649818),Point(type: "finish", latitude: 43.6197084, longitude: 7.062774)])
+    ]
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,18 +36,36 @@ class MapHandlerViewController: UIViewController {
         button.layer.cornerRadius = button.frame.width / 2
     }
     
-    func trst(){
-        print("abc")
+    // Content to pass to child viewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is MapController
+        {
+            let vc = segue.destination as? MapController
+            mapController = vc
+            vc?.mapHandlerVC = self
+        } else if segue.destination is PopUpViewController{
+            let vc = segue.destination as? PopUpViewController
+            vc?.runs = self.runs
+            vc?.currentPosition = mapController.currentPosition
+            vc?.mapHandlerVC = self
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    /**
+        Notify an user about a point of interest
+     */
+    func notifyUser(){
+        let alert = UIAlertController(title: "Title", message: "Bravo, vous avez trouvé un nouveau point d'interêt !", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
+    func newRunChosen(_ run: Run){
+        mapController.run = run
+        mapController.newPath()
+    }
 
 }
