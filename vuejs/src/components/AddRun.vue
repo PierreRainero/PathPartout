@@ -11,11 +11,11 @@
                 <textarea class="form-control" id="description" rows="3" placeholder="Idéal avec les enfants pour se rafraîchir."></textarea>
             </div>
             <div class="form-group">
-                <label for="description"><b>3.</b> Ajouter des points pour définir votre tracer</label>
-                <gmap-autocomplete style="width: 100%; margin-bottom: 10px" id="inputMarker"
+                <label for="description"><b>3.</b> Ajouter des points sur la carte pour définir votre tracer</label>
+                <!-- <gmap-autocomplete style="width: 100%; margin-bottom: 10px" id="inputMarker"
                   @place_changed="setPlace">
-                </gmap-autocomplete>
-                <button type="button" class="btn btn-success" v-on:click="addMarker()">Ajouter un point</button>
+                </gmap-autocomplete> -->
+                <!-- <button type="button" class="btn btn-success" v-on:click="addMarker()">Ajouter un point</button> -->
             </div>
         </div>
           <div class="btn-add">
@@ -43,7 +43,6 @@ export default {
       this.$emit("back");
     },
     add: function() {
-      console.log("add run");
       this.$emit("back");
     },
     addMarker: function() {
