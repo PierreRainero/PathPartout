@@ -31,7 +31,7 @@ class MapHandlerViewController: UIViewController {
     var mapController:MapController!
     var currentPoint:Point?
     var runs: [Run] = [
-        Run(name: "Tour de St Phillipe", description: "Un petit tour pendant la pause repas.", points: [Point(type: "start", latitude: 43.616100, longitude: 7.073171, name: "MK", description: "Le MK, bar légendaire de Sophia Antipolis.", picture: UIImage(named: "beer")),Point(type: "", latitude: 43.617911, longitude: 7.074644, name: "", description: "", picture: UIImage(named: "question")),Point(type: "", latitude: 43.622734, longitude: 7.0756081, name: "", description: "", picture: UIImage(named: "question")),Point(type: "finish", latitude: 43.620458, longitude: 7.070573, name: "", description: "", picture: UIImage(named: "question"))])
+        Run(name: "Tour de St Phillipe", description: "Un petit tour pendant la pause repas. Je rajoute un peut de texte pour voir le saut de ligne.", points: [Point(type: "start", latitude: 43.616100, longitude: 7.073171, name: "MK", description: "Le MK, bar légendaire de Sophia Antipolis.", picture: UIImage(named: "beer")),Point(type: "", latitude: 43.617911, longitude: 7.074644, name: "", description: "", picture: UIImage(named: "question")),Point(type: "", latitude: 43.622734, longitude: 7.0756081, name: "", description: "", picture: UIImage(named: "question")),Point(type: "finish", latitude: 43.620458, longitude: 7.070573, name: "", description: "", picture: UIImage(named: "question"))])
         /*,
         Run(
             name: "Tournée des bars", description: "Tournée des nombreux bars des alentours.", points: [Point(type: "start", latitude: 43.618673, longitude: 7.0748659, name: "MK", picture: UIImage(named: "mk")),Point(type: "", latitude: 43.6177577, longitude: 7.0746102, name: "", picture: UIImage(named: "question")),Point(type: "", latitude: 43.6212068, longitude: 7.0639032, name: "", picture: UIImage(named: "question")),Point(type: "finish", latitude: 43.619034, longitude: 7.0565848, name: "", picture: UIImage(named: "question"))])//,
@@ -70,8 +70,8 @@ class MapHandlerViewController: UIViewController {
             let vc = segue.destination as? MapController
             mapController = vc
             vc?.mapHandlerVC = self
-        } else if segue.destination is PopUpViewController{
-            let vc = segue.destination as? PopUpViewController
+        } else if segue.destination is RunsViewController{
+            let vc = segue.destination as? RunsViewController
             vc?.runs = self.runs
             vc?.currentPosition = mapController.currentPosition
             vc?.mapHandlerVC = self

@@ -16,7 +16,7 @@ class InfosTableViewCell: UITableViewCell {
     @IBOutlet weak var cellDistance: UILabel!
 }
 
-class PopUpViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RunsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var Popupview: UIView!
     @IBOutlet weak var tableView: UITableView!

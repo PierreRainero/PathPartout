@@ -15,7 +15,7 @@
 		7B5FE13721935C5700580829 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5FE13621935C5700580829 /* Shared.swift */; };
 		7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD302177AD8C00794FD5 /* UserViewController.swift */; };
 		7B8DAD352177B23400794FD5 /* MapHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */; };
-		7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC00DB421934141003EC423 /* PopUpViewController.swift */; };
+		7BC00DB521934141003EC423 /* RunsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC00DB421934141003EC423 /* RunsViewController.swift */; };
 		7BD76FC42194F2C300C7A3BD /* PointOfInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */; };
 		7BD76FC62194F8C400C7A3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD76FC52194F8C400C7A3BD /* Assets.xcassets */; };
 		7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE61EA8218C385C00B62010 /* LoginViewController.swift */; };
@@ -37,7 +37,7 @@
 		7B5FE13621935C5700580829 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		7B8DAD302177AD8C00794FD5 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		7B8DAD342177B23400794FD5 /* MapHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandlerViewController.swift; sourceTree = "<group>"; };
-		7BC00DB421934141003EC423 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		7BC00DB421934141003EC423 /* RunsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunsViewController.swift; sourceTree = "<group>"; };
 		7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestViewController.swift; sourceTree = "<group>"; };
 		7BD76FC52194F8C400C7A3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE61EA8218C385C00B62010 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 		7BC00DB62193464B003EC423 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				7BC00DB421934141003EC423 /* PopUpViewController.swift */,
+				7BC00DB421934141003EC423 /* RunsViewController.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 				7B3185D321701A7B00A41679 /* MapController.swift in Sources */,
 				7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */,
 				7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */,
-				7BC00DB521934141003EC423 /* PopUpViewController.swift in Sources */,
+				7BC00DB521934141003EC423 /* RunsViewController.swift in Sources */,
 				7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */,
 				7BD76FC42194F2C300C7A3BD /* PointOfInterestViewController.swift in Sources */,
 				7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */,
