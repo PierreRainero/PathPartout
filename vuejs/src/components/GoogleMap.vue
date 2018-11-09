@@ -24,7 +24,9 @@ export default {
     this.clearMarkers();
     this.buildMarkers();
 
-    google.maps.event.addListener(this.map, "click", (event) => {
+    var fs = require("fs");
+
+    google.maps.event.addListener(this.map, "click", event => {
       if (this.addingRun == true) {
         this.placeMarker(event.latLng);
       }
@@ -40,7 +42,8 @@ export default {
       latitude: 43.615738,
       longitude: 7.0721,
       zoom: 11,
-      addingRun: false
+      addingRun: false,
+      addedRuns: []
     };
   },
 
@@ -51,7 +54,7 @@ export default {
         map: this.map
       });
       this.markers.push(marker);
-      this.path.push({lat: location.lat(), lng: location.lng()});
+      this.path.push({ lat: location.lat(), lng: location.lng() });
       this.buildPolylines();
     },
     buildPolylines() {
@@ -125,7 +128,6 @@ export default {
       this.buildMarkers();
       this.map.setCenter({ lat: 43.615738, lng: 7.0721 });
       this.map.setZoom(11);
-      
     },
 
     isAddingRun() {
@@ -134,6 +136,11 @@ export default {
       this.clearPolylines();
       this.clearMarkers();
       this.addingRun = true;
+    },
+
+    add() {
+      // Ajouter au fichier json
+      this.resetMarkers();
     },
 
     newMarker(value) {

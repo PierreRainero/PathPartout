@@ -11,11 +11,18 @@
                 <textarea class="form-control" id="description" rows="3" placeholder="Idéal avec les enfants pour se rafraîchir."></textarea>
             </div>
             <div class="form-group">
-                <label for="description"><b>3.</b> Ajouter des points sur la carte pour définir votre tracer</label>
-                <!-- <gmap-autocomplete style="width: 100%; margin-bottom: 10px" id="inputMarker"
-                  @place_changed="setPlace">
-                </gmap-autocomplete> -->
-                <!-- <button type="button" class="btn btn-success" v-on:click="addMarker()">Ajouter un point</button> -->
+                <label for="description" v-if="!helper.isMobileDevice()"><b>3.</b> Ajouter des points sur la carte pour définir votre tracer</label>
+                <div v-if="helper.isMobileDevice()">
+                  <label for="description" ><b>3.</b> Ajouter des lieux d'intérêt pour définir votre tracer</label>
+                  <gmap-autocomplete style="width: 100%; margin-bottom: 10px" id="inputMarker"></gmap-autocomplete> 
+                  <button type="button" class="btn btn-success" v-on:click="addMarker()">Ajouter un lieu d'intérêt</button>
+                </div>
+            </div>
+            <div v-if="helper.isMobileDevice()" class="form-group">
+              <b v-if="this.pois.length > 0">Votre liste de points d'intérêts :</b>
+              <div v-for="(poi, index) in pois" :key="index">
+                <p>{{index+1}} - {{poi}}</p>
+              </div>
             </div>
         </div>
           <div class="btn-add">
@@ -27,12 +34,15 @@
 
 
 <script>
+import DeviceHelper from "../Helpers/deviceHelper.js";
 export default {
   name: "AddRun",
   components: {},
   data: function() {
     return {
-        nbPoints: 0
+        nbPoints: 0,
+        helper: new DeviceHelper,
+        pois: []
     };
   },
   methods: {
@@ -43,14 +53,11 @@ export default {
       this.$emit("back");
     },
     add: function() {
-      this.$emit("back");
+      this.$emit("add");
     },
     addMarker: function() {
-      if (this.currentPlace) {
-        let marker = this.currentPlace.geometry.location.lat() + ',' + this.currentPlace.geometry.location.lng();
-        this.$emit("newMarker", marker);
-        document.getElementById('inputMarker').value = '';
-      }
+      this.pois.push(document.getElementById('inputMarker').value);
+      document.getElementById('inputMarker').value = '';
     }
   }
 };
