@@ -10,7 +10,6 @@ import React, {Component} from 'react';
 import {StyleProvider, Button, Container, Footer, FooterTab, Icon, Text} from 'native-base';
 import getTheme from './native-base-theme/components';
 import Permissions from "react-native-permissions";
-import {Alert} from "react-native";
 import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 
 import Home from "./app/screens/Home";
