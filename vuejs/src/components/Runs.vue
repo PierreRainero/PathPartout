@@ -4,7 +4,7 @@
       <div class="navbar-brand" v-on:click="resetRuns()">{{ clickedItem == null ? 'Mes tracers' : '	&lt; Mes tracers'}}</div>
         <div class="scrollable">
           <div v-for="(run, index) in runs" :key="index" v-on:click="clickRun(index)">
-            <Run :title=run.title :description=run.description :date=run.date :img=run.img  :clicked=isClicked(index) :length=run.length :pois=run.pois />
+            <Run :title=run.title :description=run.description :date=run.date :img=run.img  :clicked=isClicked(index) :length=run.length :pois=run.pois @viewRunOnSmartphone="viewRunOnSmartphone"/>
           </div>
           <div class="btn-add">
             <button type="button" class="btn btn-success" v-on:click="addRun()">+ Ajouter un tracer</button>
@@ -44,6 +44,9 @@ export default {
     },
     addRun: function() {
       this.$emit("addRun");
+    },
+    viewRunOnSmartphone() {
+      this.$emit("viewRunOnSmartphone");
     }
   }
 };
