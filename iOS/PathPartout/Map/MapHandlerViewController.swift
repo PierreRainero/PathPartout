@@ -78,30 +78,31 @@ class MapHandlerViewController: UIViewController {
         } else if segue.destination is PointOfInterestViewController{
             let vc = segue.destination as? PointOfInterestViewController
             vc?.currentPoint = currentPoint
-            /*
-            vc?.runs = self.runs
-            vc?.currentPosition = mapController.currentPosition
-            vc?.mapHandlerVC = self*/
         }
     }
     
     /**
         Notify an user about a point of interest
      */
-    func notifyUser(_ point: Point){
+    func notifyUserNearFromPoint(_ point: Point){
         cautionButton.isHidden = false
         currentPoint = point
-        /*
-        let alert = UIAlertController(title: "Title", message: "Bravo, vous avez trouvé un nouveau point d'interêt !", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-        }))
-        self.present(alert, animated: true, completion: nil)*/
     }
     
     func newRunChosen(_ run: Run){
         mapController.run = run
         mapController.newPath()
     }
-
+    
+    func hideNearPointButton(){
+        cautionButton.isHidden = true
+    }
+    
+    func notifyUserPointFound(_ point: Point){
+        let alert = UIAlertController(title: point.name, message: "Bravo, vous avez trouvé un nouveau point d'interêt !", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+            NSLog("The \"OK\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 }

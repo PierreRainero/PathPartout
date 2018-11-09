@@ -28,13 +28,10 @@ class MapController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        
         // Get location
-        
         self.locationManager.requestAlwaysAuthorization()
         // For use in foreground
         self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -71,33 +68,42 @@ class MapController: UIViewController {
     */
     func displayPointsOfInterest() {
         let path = GMSMutablePath()
+        var noPointFound: Bool = true
         
         if(run == nil) {return}
         let locations = run.points
+        
         for location in locations {
             path.add(CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) // Add point to path
-            let marker = GMSMarker()
             
+            // Mark the location
+            let marker = GMSMarker()
+            marker.title = location.type
             marker.position = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             // Use an icon
             if (location.type == "start") { marker.icon = UIImage(named: "start_icon") }
             else if (location.type == "finish") { marker.icon = UIImage(named: "finish_icon") }
             else { marker.icon = GMSMarker.markerImage(with: UIColor(named: "PClair")) }
-            
-            if(location.latitude == currentPosition.latitude && location.longitude == currentPosition.longitude){
-                mapHandlerVC?.notifyUser(location)
-            }
-            
-            marker.title = location.type
             marker.map = mapView
+            
+            let dist = CLLocation(latitude: currentPosition.latitude, longitude: currentPosition.longitude).distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
+            print(dist)
+            if(dist <= 1) { mapHandlerVC?.notifyUserPointFound(location) }
+            if(dist <= 5) {
+                mapHandlerVC?.notifyUserNearFromPoint(location)
+                noPointFound = false
+            }
         }
         
+        if noPointFound { mapHandlerVC?.hideNearPointButton() }
+    
         let rectangle = GMSPolyline(path: path)
         rectangle.strokeWidth = 5
         rectangle.strokeColor = UIColor(named: "PSombre")!
         rectangle.map = mapView
         self.view = mapView
     }
+    
     
     // When new path is created, new map needed !
     func newPath(){
