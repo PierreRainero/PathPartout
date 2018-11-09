@@ -24,7 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # doc
-./doc/*.docx
+/doc/*.docx
 
 # others
 scripts/flow/*/.flowconfig
