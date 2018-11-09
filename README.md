@@ -12,6 +12,8 @@
 
 L’application a pour objectif de planifier et d’accompagner l’utilisateur pour effectuer tout type de trajets ; qu’il s’agisse d’une randonnée, d’un tour d’une ville, etc… Elle aura aussi pour fonctionnalité de servir de lien social entre les utilisateurs en permettant d’échanger des informations relatives à un trajet : système de messages, partage de points d’intérêts, … Une fois le trajet planifié, l’utilisateur va pouvoir se servir de l’application pour s’orienter et obtenir des informations sur les points d’intérêts qu’il va rencontrer.
 
+_Voir le [rapport](./rapport.pdf) du projet pour plus d'informations._  
+
 ## Charte graphique
 
 ### Couleurs
