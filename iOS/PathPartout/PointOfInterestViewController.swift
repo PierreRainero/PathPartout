@@ -13,7 +13,6 @@ class PointOfInterestViewController: UIViewController {
     @IBOutlet weak var Popupview: UIView!
     var currentPoint: Point!
     @IBOutlet weak var pointName: UILabel!
-    @IBOutlet weak var pointPicture: UIImageView!
     @IBOutlet weak var pointDescription: UILabel!
     
     override func viewDidLoad() {
@@ -31,8 +30,6 @@ class PointOfInterestViewController: UIViewController {
         self.modalPresentationStyle = .overFullScreen
         
         pointName.text = currentPoint.name
-        pointPicture.image = currentPoint.picture
-        pointPicture.adjustsImageSizeForAccessibilityContentSizeCategory = true
         pointDescription.text = currentPoint.description
         pointDescription.numberOfLines = 0
         pointDescription.lineBreakMode = .byWordWrapping

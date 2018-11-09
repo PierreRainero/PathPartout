@@ -87,7 +87,6 @@ class MapController: UIViewController {
             marker.map = mapView
             
             let dist = CLLocation(latitude: currentPosition.latitude, longitude: currentPosition.longitude).distance(from: CLLocation(latitude: location.latitude, longitude: location.longitude))
-            print(dist)
             if(dist <= 1) { mapHandlerVC?.notifyUserPointFound(location) }
             if(dist <= 5) {
                 mapHandlerVC?.notifyUserNearFromPoint(location)

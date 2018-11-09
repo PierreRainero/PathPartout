@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2012E321938020007BA7EB /* RunTableViewController.swift */; };
 		7B3185C1217015CC00A41679 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3185C0217015CC00A41679 /* AppDelegate.swift */; };
 		7B3185C6217015CC00A41679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C4217015CC00A41679 /* Main.storyboard */; };
 		7B3185CB217015CE00A41679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */; };
@@ -27,7 +26,6 @@
 		05F9466194891F01F2EFCE66 /* libPods-PathPartout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PathPartout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B96FAA474B4FC8D591F257 /* Pods-PathPartoutReborn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PathPartoutReborn.release.xcconfig"; path = "Pods/Target Support Files/Pods-PathPartoutReborn/Pods-PathPartoutReborn.release.xcconfig"; sourceTree = "<group>"; };
 		7B1CA2B62170986E0041EDE5 /* libPods-PathPartoutReborn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-PathPartoutReborn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B2012E321938020007BA7EB /* RunTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTableViewController.swift; sourceTree = "<group>"; };
 		7B3185BD217015CC00A41679 /* PathPartout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathPartout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B3185C0217015CC00A41679 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B3185C5217015CC00A41679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				7B3185C4217015CC00A41679 /* Main.storyboard */,
 				7B3185C9217015CE00A41679 /* LaunchScreen.storyboard */,
 				7B3185CC217015CE00A41679 /* Info.plist */,
-				7B2012E321938020007BA7EB /* RunTableViewController.swift */,
 				7BD76FC32194F2C300C7A3BD /* PointOfInterestViewController.swift */,
 				7BD76FC52194F8C400C7A3BD /* Assets.xcassets */,
 			);
@@ -276,7 +273,6 @@
 			files = (
 				7B8DAD312177AD8C00794FD5 /* UserViewController.swift in Sources */,
 				7B3185D321701A7B00A41679 /* MapController.swift in Sources */,
-				7B2012E421938020007BA7EB /* RunTableViewController.swift in Sources */,
 				7BE61EA9218C385C00B62010 /* LoginViewController.swift in Sources */,
 				7BC00DB521934141003EC423 /* RunsViewController.swift in Sources */,
 				7BE61EAB218C3D5800B62010 /* Switcher.swift in Sources */,
